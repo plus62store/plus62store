@@ -1,0 +1,47 @@
+
+<div style="display: none;" id="qris" class="animated-modal text-center" style="">
+<img class="qris" src="https://storage.googleapis.com/p62s/img/qris.jpeg"/>
+<p>Scan Qris Untuk Membayar Orderan Anda</p>
+<small>*bisa digunakan untuk semua jenis E-wallet yang mendukung QRIS</small>
+</div>
+
+<div style="display: none;" id="transfer" class="animated-modal text-center" style="width:400px!important;">
+<p>Transfer Ke Nomor Rekening</p>
+<br/></p>
+<div class="col-lg">
+                <div class="input-group" color="info">
+BTPN<input type="text" id="btpn" class="form-control" value="903700011795" readonly>
+                  <div class="input-group-append">
+                    <span class="input-group-text" onclick="myBtpn()"><i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
+                  </div>
+                </div>
+              </div>
+<div class="col-lg">
+                <div class="input-group">
+BRI<input type="text" id="bri" class="form-control" value="000501121217502" readonly>
+                  <div class="input-group-append">
+                    <span class="input-group-text" onclick="myBri()"><i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
+                  </div>
+                </div>
+              </div>
+</div>
+
+    <script type="text/javascript">
+function myBtpn() {
+  var copyText = document.getElementById("btpn");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BTPN berhasil disalin, Silahkan melakukan pembayaran.");
+}
+</script>
+
+<script type="text/javascript">
+function myBri() {
+  var copyText = document.getElementById("bri");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
+}
+    </script>

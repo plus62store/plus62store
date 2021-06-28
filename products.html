@@ -1,0 +1,28 @@
+---
+layout: default
+sidebar_option: sidebar
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="product-post">
+<a href="{{ site.baseurl }}{{ post.url }}">
+<ion-card class="product-thumb">
+<ion-badge class="discount-badge"><ion-label>{{post.diskon}}</ion-label></ion-badge>
+    <img src="{{ post.image }}" />
+        <ion-card-header class="product-header">
+            <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
+            <div class="diskon">Rp. {{ post.price }}</div>
+            <div class="price">Rp. {{ post.discount }}</div>
+                </ion-card-header>
+                <ion-card-content class="product-content">
+            <div class="content">
+    <div class="sale">{{post.riv}} Terjual</div>
+    <div class="rate"><ion-icon name="star" style="color:#f3ae0f;"></ion-icon> {{ post.rating }}</div>
+            </div>
+        </ion-card-content>
+</ion-card>
+</a>
+    </article>
+  {% endfor %}
+</div>

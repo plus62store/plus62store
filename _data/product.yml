@@ -1,0 +1,11 @@
+masker-001: 
+    image: /images/404.jpg
+    name: Masker Bordir
+    price: '20.000'
+    rating: 4.9
+    
+masker-002:
+    image: /images/404.jpg
+    name: Masker Bordir
+    price: '15.000'
+    rating: 4.8

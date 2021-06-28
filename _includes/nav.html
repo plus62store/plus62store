@@ -1,0 +1,8 @@
+
+     <ion-segment color="tertiary" value="{{segment.value}}">
+    {% for segment in site.data.navigation %}
+        <ion-segment-button value="{{segment.value}} active" onClick="window.location.href='{{segment.url}}'">
+          <ion-label>{{segment.title}}</ion-label>
+        </ion-segment-button>
+   {% endfor %}
+      </ion-segment>

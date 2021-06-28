@@ -1,0 +1,12 @@
+- title: Products
+  value: products
+  url: /products
+- title: Blogs
+  value: blogs
+  url: /blogs
+- title: Payment
+  value: payment
+  url: /payment
+- title: Cart
+  value: cart
+  url: /cart

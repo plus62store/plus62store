@@ -25,3 +25,10 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
+// Mobile breakpoints
+@mixin ipad {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}

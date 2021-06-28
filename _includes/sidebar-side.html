@@ -1,0 +1,12 @@
+  <ion-card class="widget">
+    <ion-card-content>
+    <h3 class="widget-title">Recent Posts</h3>
+    <ul>
+      {% for post in site.blogs limit:5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    </ion-card-content>
+  </ion-card>

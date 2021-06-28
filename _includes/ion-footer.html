@@ -1,0 +1,94 @@
+{% if page.layout == "product" %}
+    <ion-footer class="footer-product">
+      <ion-toolbar class="toolsbar-profile mobile-hide">
+    <ion-chip outline color="primary" button  onclick="myProduct()">
+          <ion-avatar>
+            <img class="ava" src="{{site.avatar}}">
+          </ion-avatar>
+          <ion-label>{{site.title}}</ion-label>
+    </ion-chip>
+<script>
+function myProduct() {
+  location.replace('/products')
+}
+</script>
+    {% for link in site.data.link %}
+    <ion-chip outline color="primary" button onclick="{{link.value}}()">
+      <ion-icon name="{{link.icon}}" color="{{link.color}}"></ion-icon>
+      <ion-label>{{link.title}}</ion-label>
+    </ion-chip>
+<script>
+function {{link.value}}() {
+  location.replace('{{link.url}}')
+}
+</script>
+   {% endfor %}
+      </ion-toolbar>
+      <ion-toolbar class="toolsbar-container">
+        <ion-buttons slot="start">
+        <ion-button size="small" color="success" data-fancybox="" data-src="#whatsapp" href="javascript:;">
+            <ion-icon class="wa" name="logo-whatsapp"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start" id="modal">
+        <ion-button color="primary">
+            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-button>
+            <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
+        </ion-buttons>
+        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" {{page.outstock}}><ion-icon slot="start" name="add-outline"></ion-icon> Add To Bag</ion-button>
+<script type="text/javascript">
+  $('#item_add').click(function() {
+    fbq('track', 'Purchase', {currency: "IDR", value: {{ page.price }} });
+  });
+</script>
+            <ion-buttons slot="end">
+          <ion-button class="mobile-hide" id="howOrder" color="danger">
+            <ion-icon class="alert" name="alert-circle-outline"></ion-icon>
+          </ion-button>
+          <ion-button class="mobile-show" id="more">
+            <ion-icon class="more" name="ellipsis-vertical-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+<div id="cartModal" class="display-none">
+<ion-card class="cartModal">
+  {% include keranjang.html %}
+</ion-card>
+</div>
+<div id="moreModal" class="modalBackdrop display-none">
+<ion-card class="moreModal">
+<ion-card-content>
+    {% for link in site.data.link %}
+<ion-item button onclick="{{link.value}}()">
+      <ion-icon name="{{link.icon}}" slot="start" color="{{link.color}}"></ion-icon>
+  <ion-label>
+    {{link.title}}
+  </ion-label>
+</ion-item>
+<script>
+function {{link.value}}() {
+  location.replace('{{link.url}}')
+}
+</script>
+   {% endfor %}
+</ion-card-content>
+</ion-card>
+</div>
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form' id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <span class="mb-3">
+            Assalamualaikum! lengkapi data berikut
+        </span>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Pertanyaan</ion-label>
+            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
+        </ion-item>
+        <div class="mb-0 text-right">
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
+        </div>
+    </form>
+{% endif %}

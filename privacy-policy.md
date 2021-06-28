@@ -1,15 +1,15 @@
 ---
-layout: pageQris
+layout: page
 title: Privacy Policy
 permalink: /privacy-policy.html
 ---
 
 
-<p style="text-align: justify;">At As-Syariah Bordir, accessible from https://as-syariahbordir.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by As-Syariah Bordir and how we use it.</p>
+<p style="text-align: justify;">At Plus62 Store, accessible from https://shop.plus62store.my.id, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Plus62 Store and how we use it.</p>
 
 <p style="text-align: justify;">If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 
-<p style="text-align: justify;">This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in As-Syariah Bordir. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/#wizard">Free Privacy Policy Generator</a>.</p>
+<p style="text-align: justify;">This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Plus62 Store. This policy is not applicable to any information collected offline or via channels other than this website.</p>
 
 <h2>Consent</h2>
 
@@ -37,11 +37,11 @@ permalink: /privacy-policy.html
 
 <h2>Log Files</h2>
 
-<p style="text-align: justify;">As-Syariah Bordir follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+<p style="text-align: justify;">Plus62 Store follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
 
 <h2>Cookies and Web Beacons</h2>
 
-<p style="text-align: justify;">Like any other website, As-Syariah Bordir uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+<p style="text-align: justify;">Like any other website, Plus62 Store uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
 
 <p style="text-align: justify;">For more general information on cookies, please read <a href="https://www.privacypolicyonline.com/what-are-cookies/">"What Are Cookies" from Cookie Consent</a>.</p>
 
@@ -62,15 +62,15 @@ permalink: /privacy-policy.html
 
 <h2>Advertising Partners Privacy Policies</h2>
 
-<P style="text-align: justify;">You may consult this list to find the Privacy Policy for each of the advertising partners of As-Syariah Bordir.</p>
+<P style="text-align: justify;">You may consult this list to find the Privacy Policy for each of the advertising partners of Plus62 Store.</p>
 
-<p style="text-align: justify;">Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on As-Syariah Bordir, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+<p style="text-align: justify;">Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Plus62 Store, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
 
-<p style="text-align: justify;">Note that As-Syariah Bordir has no access to or control over these cookies that are used by third-party advertisers.</p>
+<p style="text-align: justify;">Note that Plus62 Store has no access to or control over these cookies that are used by third-party advertisers.</p>
 
 <h2>Third Party Privacy Policies</h2>
 
-<p style="text-align: justify;">As-Syariah Bordir's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
+<p style="text-align: justify;">Plus62 Store's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
 
 <p style="text-align: justify;">You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
 
@@ -97,4 +97,4 @@ permalink: /privacy-policy.html
 
 <p style="text-align: justify;">Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
 
-<p style="text-align: justify;">As-Syariah Bordir does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+<p style="text-align: justify;">Plus62 Store does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>

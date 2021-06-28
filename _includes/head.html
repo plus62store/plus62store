@@ -1,0 +1,109 @@
+
+  <head>
+    <title>{{ site.name }} – {% if page.title %}{{ page.title }} – {% endif %}{{ site.description }}</title>
+
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+    <!-- Primary Meta Tags -->
+    <title>{{site.title}}</title>
+    <meta name="title" content="{{site.title}}">
+    <meta name="description" content="{{site.description}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:title" content="{{site.title}}">
+    <meta property="og:description" content="{{site.description}}">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{site.url}}">
+    <meta property="twitter:title" content="{{site.title}}">
+    <meta property="twitter:description" content="{{site.description}}">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    {% include fav.html %}
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.url }}/feed.xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="{{ site.baseurl }}/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/fancybox/dist/jquery.fancybox.min.js"></script>
+
+  <script type="module">
+    import { actionSheetController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.actionSheetController = actionSheetController;
+  </script>
+  <script type="module">
+    import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.toastController = toastController;
+  </script>
+  <script type="module">
+    import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.modalController = modalController;
+  </script>
+<style>div::-webkit-scrollbar,.app-description-text::-webkit-scrollbar{display:none;}</style>
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "url": "https://shop.plus62store.my.id",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/search?keyword={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    {% if page.layout == "product" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "image": "{{ page.image }}",
+  "brand":"plus62bordir",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "IDR",
+    "price": "{{ page.price }}",
+    "sale_price": "{{ page.discount }}",
+    "availability": "https://schema.org/InStock",
+    "url": "https://shop.plus62store.my.id{{page.url}}",
+    "priceValidUntil": "2022-01-01T00:00:00.000Z"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{page.rating}}",
+    "ratingCount": "{{page.rC}}",
+    "reviewCount": "{{page.riv}}",
+    "bestRating": "5.",
+    "worstRating": "1"
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "NdanG"
+    }
+  },
+  "description": "{{ page.description }}",
+  "sku": "{{page.sku}}",
+  "mpn": "{{page.mpn}}",
+  "category": "{{page.categories}}",
+  "productID": "{{page.noID}}"
+}
+</script>
+    {% endif %}
+  </head>

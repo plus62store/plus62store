@@ -1,0 +1,17 @@
+- title: Lokasi Kami
+  value: lokasi
+  url: https://goo.gl/maps/rQ3LDeomVgAZcpZZ7
+  icon: map-outline
+  color: danger
+
+- title: Payment
+  value: blogs
+  url: /pembayaran
+  icon: cash-outline
+  color: success
+
+- title: Privacy Policy
+  value: privacyPolicy
+  url: /privacy-policy
+  icon: warning-outline
+  color: warning

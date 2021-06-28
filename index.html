@@ -1,29 +1,29 @@
 ---
 layout: default
+sidebar_option: no-sidebar
 ---
 
-        <div class="produk-page">
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-<a href="{{ site.baseurl }}{{ post.url }}">
-<ion-card>
-<small class="emblem">{{ post.persen }}</small>
-        <img src="{{ post.image }}" />
-<small class="bintang"><ion-icon style="color:#ffb200;" name="star"></ion-icon> {{post.rate}} / 5</small>
-        <ion-card-header>
-        <center>
-          <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
-          <ion-card-subtitle class="diskon">IDR {{ post.harga }}</ion-card-subtitle>
-  <ion-card-title class="hardis">IDR {{ post.diskon }}</ion-card-title>
-        </center>
-        </ion-card-header>
-        <ion-card-content>
-      <div class="entry">
-      </div>
-        </ion-card-content>
-</ion-card></a>
-    </article>
-  {% endfor %}
-</div>
-        </div>
+<script>
+    function pageRedirect() {
+        window.location.replace("/products");
+    }      
+    setTimeout("pageRedirect()", 5000);
+</script>
+      <ion-slides>
+        <ion-slide>
+          <img src="https://storage.googleapis.com/p62s/img/pakaimasker.jpg"/>
+          <h2></h2>
+          <ion-button fill="clear" onclick="myButton()">Go Shopping <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+      </ion-slides>
+
+  <style>
+    .wrapper-masthead,ion-toolbar{display:none!important;}
+    p{padding: 0 40px;font-size: 14px;line-height: 1.5;color: var(--ion-color-step-600, #60646b);}
+  </style>
+<script>
+function myButton() {
+  location.replace("/products")
+}
+</script>
