@@ -3,18 +3,19 @@ title: Plus62 Store
 description: Produk & Jasa Bordir Tasikmalaya
 avatar: /assets/logo/icon.svg
 
-breakingNews: Test New Site at Github
+breakingNews: Web Store Sedang Tahap Pengembangan
 
 comen: 30234
-sitekey: 6LdSeuwZAAAAAPgWy6REloO70SStpBewNGuGmTkG
-fb-pixel: 
-fb-appID: 
-fb-admin: 
-fb-profile: 
-fb-pages: 
-signal-id: 23925364-ab76-466d-b529-44ea74b5d7c1
+sitekey: 6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7
+fb-pixel: 791401205101923
+fb-appID: 437300347340287
+fb-admin: 158878762428839
+fb-profile: 435671100899312
+fb-pages: 107881477662203
+signal-id: 6d1eb5cd-8c5d-4cf3-aa06-eed9c3e1aee0
+safari-web-ID: web.onesignal.auto.0f4ef0fc-d020-4184-9066-253532c318fc
 google_analytics: UA-187631685-1
-url:
+url: 
 baseurl: ""
 
 permalink: products/:title
@@ -77,6 +78,11 @@ footer-links:
   stackoverflow: 
   youtube: 
   googleplus: 
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 
 exclude:
   - Gemfile
