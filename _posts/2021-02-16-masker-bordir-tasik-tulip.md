@@ -45,6 +45,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/093d0e974bb5e456f659550939d8897a
 image: 'https://cf.shopee.co.id/file/b328e360371fe525dc18747276f31768'
 facebook_image_path:
+display: block
 ---
 
 - Bahan kain 100% Katun dengan 3 lapisan,

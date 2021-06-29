@@ -197,6 +197,11 @@ img {
 // .masthead
 //
 
+.page-price {
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .box-payment{display:flex;height:255px;justify-content:center;
   @include mobile {height:270px;flex-wrap:wrap;grid-gap:12px;}}
 

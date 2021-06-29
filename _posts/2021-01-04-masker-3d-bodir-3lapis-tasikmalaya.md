@@ -48,6 +48,7 @@ styles:
     color: '#298f83'
     image_path: https://cf.shopee.co.id/file/74530543685ec9d3fba71596bc7b62d0
 image: 'https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef'
+display: block
 ---
 
 - Kain : 100% Katun,

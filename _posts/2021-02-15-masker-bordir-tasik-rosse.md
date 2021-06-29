@@ -44,6 +44,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/0414c39a62e077ff0813791085d55352
 image: 'https://cf.shopee.co.id/file/465836a1d2cbfdd682656a259ebd06e1'
 facebook_image_path:
+display: block
 ---
 
 - Katun dengan 3 lapisan.

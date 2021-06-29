@@ -45,6 +45,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/ab2777be709bc6aa0c31093c23b1b566
 image: 'https://cf.shopee.co.id/file/0f895509b187d2da6ae3e06a460841c0'
 facebook_image_path:
+display: block
 ---
 
 - Lapisan Tengah : Interlining,

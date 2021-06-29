@@ -161,7 +161,7 @@
     <div 
 
  role="main" class="container">
-      <style type="text/css">.masthead,.wrapper-footer{display:none;}.container{padding:0px;}.layout-main{margin-top:0px;}</style>
+      <style type="text/css">.masthead,.wrapper-footer{display:none;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
 <article class="post-product simpleCart_shelfItem">
 <span class="display-none item_link">http://localhost:4000/products/masker-bordir-tasikmalaya-mawar</span>
 <ion-card class="product-page">
@@ -220,10 +220,10 @@
 </div>
 <div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. 15.600</div></span>
 <p/>
-<link itemprop="availability" href="https://schema.org/InStock" />Stok Tersedia
+<link itemprop="availability" href="https://schema.org/InStock" /><ion-note color="tertiary">Stok Tersedia</ion-note>
         	<div class="style-picker">
             
-              <div id="product-1"  class="item_color"  style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:#000000;cursor:pointer;"><span style="color:#fff">Black</span></div>
+              <div id="product-1"  class="item_color"  style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:#000000;cursor:pointer;"><span style="color:#fff">Hitam</span></div>
             
               <div id="product-2"  style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:#4a5265;cursor:pointer;"><span style="color:#fff">Navi</span></div>
             
@@ -241,7 +241,7 @@
             
         	</div>
 
-          <select class="item form-control item_model">
+          <select class="item form-control item_model" style="display:block;">
         <ion-label>Model Tali</ion-label>
             
               <option value="HeadLoop"> HeadLoop </option>
@@ -650,7 +650,7 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
 
     async function handleButtonClick() {
       const actionSheet = await actionSheetController.create({
-        header: 'Test New Site at Github',
+        header: 'Web Store Sedang Tahap Pengembangan',
         buttons: [
           { text: 'Tutup', role: 'cancel' }
         ]

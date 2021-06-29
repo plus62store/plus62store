@@ -42,6 +42,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/df0a91841d6b71c9f4b96066ccc853f3
 image: 'https://cf.shopee.co.id/file/6549ebebfdff7f4355dc0398f5f5b9e2'
 facebook_image_path:
+display: block
 ---
 
 - Jenis Kain : Katun, 3 ply/lapis,

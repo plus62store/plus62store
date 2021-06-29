@@ -19,7 +19,7 @@ tali:
   - EarLoop
   - Tali Ikat
 styles:
-  - name: Black
+  - name: Hitam
     color: '#000000'
     image_path: https://cf.shopee.co.id/file/4160ff1e3d6532387c2cb1e42c586989
   - name: Navi
@@ -45,6 +45,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710
 image: https://cf.shopee.co.id/file/7b1760ae16b5a427c4c9ff32f68a69e4
 facebook_image_path: https://cf.shopee.co.id/file/7b1760ae16b5a427c4c9ff32f68a69e4
+display: block
 ---
 
 - Lapisan Katun + Vislin, 

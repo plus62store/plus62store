@@ -34,6 +34,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/0e200dc5e3d7509e77a839e5f8e98717
 image: 'https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0'
 facebook_image_path:
+display: none
 ---
 
 ### Material : 

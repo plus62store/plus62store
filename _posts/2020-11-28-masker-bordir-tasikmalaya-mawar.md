@@ -19,7 +19,7 @@ tali:
   - EarLoop
   - Tali Ikat
 styles:
-  - name: Black
+  - name: Hitam
     color: '#000000'
     image_path: https://cf.shopee.co.id/file/cb4eb041c407779ad49d2e9d5b2b9320
   - name: Navi
@@ -45,6 +45,7 @@ styles:
     image_path: https://cf.shopee.co.id/file/d0d90956a94cb43d18bb04424d4e780c
 image: 'https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e'
 facebook_image_path:
+display: block
 ---
 
 - Bordir : Manual (JUKI),

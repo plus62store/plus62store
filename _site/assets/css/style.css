@@ -256,6 +256,11 @@ img {
   }
 }
 
+.page-price {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .box-payment {
   display: flex;
   height: 255px;
