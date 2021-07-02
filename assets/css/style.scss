@@ -130,7 +130,7 @@ img {
  z-index: 1;
  justify-content: center; 
  align-items: center ;
-    @include ipad {
+    @include mobile {
     height:100%;}
 }
 
@@ -185,12 +185,16 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 #main-side{width:820px;float:left;
-    @include ipad {
+    @include mobile {
     width:100%;}
+    @include pro {
+    float:none;}
 }
 
 #sidebar{width: 380px;float:right;
     @include mobile {
+    width:100%;}
+    @include ipad {
     width:100%;}
 }
 //
@@ -202,7 +206,7 @@ img {
     font-weight: 900;
 }
 
-.box-payment{display:flex;height:255px;justify-content:center;
+.box-payment{display:flex;height:255px;justify-content:center;padding: 25px;
   @include mobile {height:300px;flex-wrap:wrap;grid-gap:12px;overflow:visible;padding-bottom:20px;}}
 
 .wrapper-masthead {
@@ -217,6 +221,9 @@ img {
     padding: 12px;
     text-align: center;
     height: 73px;}
+
+  @include ipad {
+    padding: 12px 20px;}
 }
 
 .site-avatar {
@@ -244,6 +251,9 @@ img {
   @include mobile {
     flex-wrap: wrap;
     width: 100%;}
+
+  @include ipad {
+    width: auto;}
 }
 
 .product-img {
@@ -252,6 +262,9 @@ img {
 
   @include mobile {
     height:93%;}
+
+  @include ipad {
+    height: 0;}
 }
 
 .img-product {
@@ -259,6 +272,9 @@ img {
 
   @include mobile {
     width: 100%;}
+
+  @include ipad {
+    width: 80%;}
 }
 
 .entry {
@@ -295,11 +311,16 @@ img {
     padding-left: 10px;}
 }
 
+.item_color{@include ipad{width:47%;}}
+
 .review {
     width: 28%;
 
   @include mobile {
     width: 100%;}
+
+  @include ipad {
+    width:50%;}
 }
 
 .style-picker {
@@ -410,6 +431,11 @@ nav {
     flex-wrap: wrap;
     position: unset;
     top: unset;}
+
+    @include ipad {
+    display: grid;
+    bottom: 10px;
+    top: 0;}
 }
 
 .product-post {
@@ -437,11 +463,18 @@ nav {
 }
 
 .product-thumb{
-    width: 250px;
+    max-width: 250px;
+    width:100%;
 
     @include mobile {
     width: auto;
     margin: 0;}
+
+    @include ipad {
+    width: 342px;}
+
+    @include pro {
+    width: 241px;}
 }
 .product-content {
     padding: 3px 5px;
@@ -464,11 +497,7 @@ nav {
 
     @include mobile {
     width: auto;
-    grid-gap: 10px;}
-
-    @include ipad {
-    width:100%;
-    width: auto;
+    grid-gap: 10px;
     margin: 0;
     padding-left: 1%;}
 }
@@ -539,8 +568,8 @@ nav {
   background-color: $lightGray;
   height: 52px;
 }
-.toolsbar-profile {margin:auto;max-width:550px;float:left;}
-.toolsbar-container{margin:auto;max-width:550px;float:right;}
+.toolsbar-profile {margin:auto;max-width:555px;float:left;@include ipad {max-width:555px;--border-width: 0!important;}}
+.toolsbar-container{margin:auto;max-width:555px;float:right;}
 .footer-product {
     padding: 0 90px;
     display: flex;
@@ -549,9 +578,13 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
+    background: #fff;
 
     @include mobile {
     padding: 0px;}
+
+    @include ipad {
+    display: grid;}
 }
 
 //SLIDE
@@ -614,7 +647,7 @@ ion-icon.wa,.alert,.cart-outline,.more{
  z-index: 1;
  justify-content: center; 
  align-items: center ;
-    @include ipad {
+    @include mobile {
     height:100%;}
 }
 .cartModal {
@@ -735,7 +768,6 @@ ion-icon.wa,.alert,.cart-outline,.more{
     display: block;
     padding: 10px 0;
     color: rgba(0,0,0,.6);
-    /*border-top: 1px solid rgba(0,0,0,.06);*/
     overflow: auto;
 }
 .feature_tw .grid {
@@ -754,9 +786,24 @@ ion-icon.wa,.alert,.cart-outline,.more{
     padding: 10px;
     padding-left: 0px;
     }
+
+    @include ipad {
+    display: grid;
+    grid-template-columns: repeat(3, 60%) 1px;
+    grid-gap: 40px;
+    font-size: 90%;
+    width: 100%;
+    max-width: calc(100% + 20px);
+    overflow-x: auto;
+    padding: 10px;
+    padding-left: 0px;
+    }
 }
 .wrapper {
     margin: auto;
+
+    @include ipad {
+    padding: 0 10px;}
 }
 .fa-minus-circle:before,.fa-plus-circle:before{font-size:20px;}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
