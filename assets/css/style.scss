@@ -203,7 +203,7 @@ img {
 }
 
 .box-payment{display:flex;height:255px;justify-content:center;
-  @include mobile {height:270px;flex-wrap:wrap;grid-gap:12px;}}
+  @include mobile {height:300px;flex-wrap:wrap;grid-gap:12px;overflow:visible;padding-bottom:20px;}}
 
 .wrapper-masthead {
   margin-bottom: 0px;
@@ -416,8 +416,26 @@ nav {
     width: auto;
 
     @include mobile {
-    width: 48%;}
+    max-width: 48%;}
 }
+
+.blog-thumb {
+    width: 193px;
+    height: 193px;
+
+    @include mobile {
+    display: none;
+    position: absolute;}
+}
+
+.blog-post {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include mobile {
+    flex-wrap: wrap;}
+}
+
 .product-thumb{
     width: 250px;
 

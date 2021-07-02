@@ -2,15 +2,15 @@
 layout: default
 sidebar_option: sidebar
 ---
-<style type="text/css">.masthead,.wrapper-footer{display:none;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
+<style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
 <article class="post-product simpleCart_shelfItem">
 <span class="display-none item_link">{{site.url}}{{page.url}}</span>
 <ion-card class="product-page">
 <div class="img-product">
           <div class="product-img">
             {% for style in page.styles %}
-          		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none"{% endunless %}>
-        				<a data-fancybox="gallery" href="{{ style.image_path }}"><img class="img-raised" src="{{ style.image_path }}" itemprop="image"></a>
+          		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display:none;"{% endunless %}>
+        				<a data-fancybox="gallery" href="{{ style.image_path }}"><img src="{{ style.image_path }}" itemprop="image"></a>
           		</div>
           	{% endfor %}
           </div>
@@ -27,11 +27,11 @@ sidebar_option: sidebar
    dari <span itemprop="reviewCount">{{page.rC}}</span> penilaian customer
   </div>
   <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-<div class="" style="display:flex;grid-gap:5px;">
-<div class="page-diskon">Rp. {{page.price}}</div>
+<div class="display-none" style="display:none;grid-gap:5px;">
+<div class="page-diskon">Rp. {{page.discount}}</div>
 <ion-badge class="badge"><ion-label>{{page.diskon}}</ion-label></ion-badge>
 </div>
-<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. {{page.discount}}</div></span>
+<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. {{page.price}}</div></span>
 <p/>
 <link itemprop="availability" href="https://schema.org/InStock" /><ion-note color="tertiary">{{page.stok}}</ion-note>
         	<div class="style-picker">

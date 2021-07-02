@@ -1,6 +1,7 @@
 ---
 layout: default
 sidebar_option: sidebar
+value: products
 ---
 
 <div class="posts">
@@ -8,12 +9,12 @@ sidebar_option: sidebar
     <article class="product-post">
 <a href="{{ site.baseurl }}{{ post.url }}">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>{{post.diskon}}</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>{{post.diskon}}</ion-label></ion-badge>
     <img src="{{ post.image }}" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
-            <div class="diskon">Rp. {{ post.price }}</div>
-            <div class="price">Rp. {{ post.discount }}</div>
+            <div class="display-none diskon">Rp. {{ post.discount }}</div>
+            <div class="price">Rp. {{ post.price }}</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">

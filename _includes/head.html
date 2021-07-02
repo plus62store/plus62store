@@ -38,11 +38,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="{{ site.baseurl }}/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="{{ site.baseurl }}/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  
   <script type="module">
-    import { actionSheetController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.actionSheetController = actionSheetController;
+    import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.alertController = alertController;
   </script>
   <script type="module">
     import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -53,7 +53,6 @@
     window.modalController = modalController;
   </script>
 <style>div::-webkit-scrollbar,.app-description-text::-webkit-scrollbar{display:none;}</style>
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -106,4 +105,8 @@
 }
 </script>
     {% endif %}
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    {% include fav.html %}
+    {% include fb-pixel.html %}
+    {% include onesignal.html %}
   </head>

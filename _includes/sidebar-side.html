@@ -1,17 +1,15 @@
-  <ion-card class="widget">
-    <ion-card-content>
+  <div class="widget">
     <h3 class="widget-title">Recent Posts</h3>
     <ion-list>
       {% for blog in site.blogs limit:5 %}
         <a href="{{ blog.url }}">
         <ion-item>
-          <ion-avatar slot="start">
+    <ion-thumbnail slot="start">
             <img src="{{ blog.image }}">
-          </ion-avatar>
+    </ion-thumbnail>
           <ion-label>{{ blog.title }}</ion-label>
         </ion-item>
         </a>
       {% endfor %}
     </ion-list>
-    </ion-card-content>
-  </ion-card>
+  </div>

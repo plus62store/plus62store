@@ -55,11 +55,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  
   <script type="module">
-    import { actionSheetController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.actionSheetController = actionSheetController;
+    import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.alertController = alertController;
   </script>
   <script type="module">
     import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -70,7 +70,6 @@
     window.modalController = modalController;
   </script>
 <style>div::-webkit-scrollbar,.app-description-text::-webkit-scrollbar{display:none;}</style>
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -123,16 +122,62 @@
 }
 </script>
     
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/manifest.json">
+
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '791401205101923');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "6d1eb5cd-8c5d-4cf3-aa06-eed9c3e1aee0",
+    });
+  });
+</script>
+
   </head>
 
 <body>
 <ion-app>
 
-    <div class="wrapper-masthead">
+    <div class="wrapper-masthead mobile-hide">
         <ion-header class="masthead clearfix">
-          <a href="/" class="site-avatar"><img src="/assets/logo/icon.svg" /></a>
+          <a href="/" class="site-avatar">
+<img src="/assets/logo/icon.svg" alt="Plus62 Store"/></a>
 
-          <div class="site-info mobile-hide">
+          <div class="site-info">
             <h1 class="site-name"><a href="/">Plus62 Store</a></h1>
             <p class="site-description">Produk & Jasa Bordir Tasikmalaya</p>
           </div>
@@ -145,23 +190,38 @@
    
             <a class="" href="/pembayaran">Payment</a>
    
-            <a href="/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position: relative;top: -6px;left:0;"></ion-badge></a>
+            <a href="/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:0;"></ion-badge></a>
           </nav>
         </ion-header>
     </div>
 
+<ion-header class="just mobile-show">
+<ion-toolbar style="padding: 0 10px;">
+        <ion-avatar>
+        <a href="/products"><img src="/assets/logo/icon.svg" alt="Plus62 Store" /></a>
+        </ion-avatar>
+        <ion-buttons slot="end">
+          <ion-button id="howOrder" color="danger">
+            <ion-icon class="alert" name="notifications-outline"></ion-icon>
+            <ion-badge color="primary" style="position:absolute;top:0px;left:0;border-radius:100%;padding:0 4px;">!</ion-badge>
+          </ion-button>
+        </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
 <ion-content>
-      <ion-refresher slot="fixed" id="refresher">
+          <ion-refresher slot="fixed" id="refresher">
         <ion-refresher-content
       pulling-icon="chevron-down-circle-outline"
-      pulling-text="Pull to refresh"
-      refreshing-text="Refreshing..."></ion-refresher-content>
+      pulling-text="Pull to reload page"
+      refreshing-text="Reloading..."></ion-refresher-content>
       </ion-refresher>
+
 <div class="layout-main">
     <div 
 
  role="main" class="container">
-      <style type="text/css">.masthead,.wrapper-footer{display:none;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
+      <style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
 <article class="post-product simpleCart_shelfItem">
 <span class="display-none item_link">http://localhost:4000/products/masker-bordir-tasik-tulip</span>
 <ion-card class="product-page">
@@ -169,35 +229,35 @@
           <div class="product-img">
             
           		<div id="product-1" class="style" >
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/78d4cb6301489559962600344af7ff41"><img class="img-raised" src="https://cf.shopee.co.id/file/78d4cb6301489559962600344af7ff41" itemprop="image"></a>
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/78d4cb6301489559962600344af7ff41"><img src="https://cf.shopee.co.id/file/78d4cb6301489559962600344af7ff41" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-2" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/388d9bb6f2074282cee4fca40640b944"><img class="img-raised" src="https://cf.shopee.co.id/file/388d9bb6f2074282cee4fca40640b944" itemprop="image"></a>
+          		<div id="product-2" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/388d9bb6f2074282cee4fca40640b944"><img src="https://cf.shopee.co.id/file/388d9bb6f2074282cee4fca40640b944" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-3" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/b9e3cc58afdc1e465fd1f8d65b6f455f"><img class="img-raised" src="https://cf.shopee.co.id/file/b9e3cc58afdc1e465fd1f8d65b6f455f" itemprop="image"></a>
+          		<div id="product-3" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/b9e3cc58afdc1e465fd1f8d65b6f455f"><img src="https://cf.shopee.co.id/file/b9e3cc58afdc1e465fd1f8d65b6f455f" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-4" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/a54e1e163e30b403aafef02b3c92f2a9"><img class="img-raised" src="https://cf.shopee.co.id/file/a54e1e163e30b403aafef02b3c92f2a9" itemprop="image"></a>
+          		<div id="product-4" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/a54e1e163e30b403aafef02b3c92f2a9"><img src="https://cf.shopee.co.id/file/a54e1e163e30b403aafef02b3c92f2a9" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-5" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/c0f1f1f7130ebb4c7f46c5b0950369e7"><img class="img-raised" src="https://cf.shopee.co.id/file/c0f1f1f7130ebb4c7f46c5b0950369e7" itemprop="image"></a>
+          		<div id="product-5" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/c0f1f1f7130ebb4c7f46c5b0950369e7"><img src="https://cf.shopee.co.id/file/c0f1f1f7130ebb4c7f46c5b0950369e7" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-6" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/48f3773f457b2dd9c48b944081914fce"><img class="img-raised" src="https://cf.shopee.co.id/file/48f3773f457b2dd9c48b944081914fce" itemprop="image"></a>
+          		<div id="product-6" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/48f3773f457b2dd9c48b944081914fce"><img src="https://cf.shopee.co.id/file/48f3773f457b2dd9c48b944081914fce" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-7" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/2eeb334ca7a08935c6e67df45055baa0"><img class="img-raised" src="https://cf.shopee.co.id/file/2eeb334ca7a08935c6e67df45055baa0" itemprop="image"></a>
+          		<div id="product-7" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/2eeb334ca7a08935c6e67df45055baa0"><img src="https://cf.shopee.co.id/file/2eeb334ca7a08935c6e67df45055baa0" itemprop="image"></a>
           		</div>
           	
-          		<div id="product-8" class="style" style="display: none">
-        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/093d0e974bb5e456f659550939d8897a"><img class="img-raised" src="https://cf.shopee.co.id/file/093d0e974bb5e456f659550939d8897a" itemprop="image"></a>
+          		<div id="product-8" class="style" style="display:none;">
+        				<a data-fancybox="gallery" href="https://cf.shopee.co.id/file/093d0e974bb5e456f659550939d8897a"><img src="https://cf.shopee.co.id/file/093d0e974bb5e456f659550939d8897a" itemprop="image"></a>
           		</div>
           	
           </div>
@@ -214,11 +274,11 @@
    dari <span itemprop="reviewCount">40</span> penilaian customer
   </div>
   <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-<div class="" style="display:flex;grid-gap:5px;">
-<div class="page-diskon">Rp. 20.000</div>
+<div class="display-none" style="display:none;grid-gap:5px;">
+<div class="page-diskon">Rp. 15.600</div>
 <ion-badge class="badge"><ion-label>22%</ion-label></ion-badge>
 </div>
-<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. 15.600</div></span>
+<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. 20.000</div></span>
 <p/>
 <link itemprop="availability" href="https://schema.org/InStock" /><ion-note color="tertiary">Stok Tersedia</ion-note>
         	<div class="style-picker">
@@ -409,7 +469,7 @@ function privacyPolicy() {
             <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-button>
             <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
         </ion-buttons>
-        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" ><ion-icon slot="start" name="add-outline"></ion-icon> Add To Bag</ion-button>
+        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" ><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
 <script type="text/javascript">
   $('#item_add').click(function() {
     fbq('track', 'Purchase', {currency: "IDR", value: 20.000 });
@@ -531,23 +591,6 @@ function privacyPolicy() {
 </ion-card-content>
 </ion-card>
 </div>
-<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form' id='whatsapp'>
-<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
-        <span class="mb-3">
-            Assalamualaikum! lengkapi data berikut
-        </span>
-        <ion-item>
-          <ion-label position="floating">Nama Lengkap</ion-label>
-            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Pertanyaan</ion-label>
-            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
-        </ion-item>
-        <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
-        </div>
-    </form>
 
 
 </article>
@@ -607,6 +650,23 @@ function myBri() {
     </script>
 
 
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <span class="mb-3">
+            Assalamualaikum! lengkapi data berikut
+        </span>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Pertanyaan</ion-label>
+            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
+        </ion-item>
+        <div class="mb-0 text-right">
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
+        </div>
+    </form>
 
 </ion-app>
     
@@ -629,6 +689,7 @@ function myBri() {
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <script src="/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/jquery-2.2.4.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/simpleCart.js"></script>
     <script async src="https://storage.googleapis.com/p62s/js/main.js"></script>
@@ -644,29 +705,28 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
       <script async src="https://storage.googleapis.com/p62s/js/add-to-cart.js"></script>
     
     
-
 <script>
     var button = document.querySelector('#howOrder');
     button.addEventListener('click', handleButtonClick);
 
     async function handleButtonClick() {
-      const actionSheet = await actionSheetController.create({
-        header: 'Web Store Sedang Tahap Pengembangan',
-        buttons: [
-          { text: 'Tutup', role: 'cancel' }
-        ]
+      const alert = await alertController.create({
+        header: '',
+        message: 'Web Store Sedang Tahap Pengembangan',
+        buttons: ['Oke']
       });
 
-      await actionSheet.present();
+      await alert.present();
     }
   </script>
+
   <script>
     var id = document.querySelector('#cartButton');
     id.addEventListener('click', handleButtonClick);
 
     async function handleButtonClick() {
       const toast = await toastController.create({
-        color: 'success',
+        color: 'dark',
         duration: 2500,
         position: 'bottom',
         message: 'Masker Bordir Tulip, berhasil masuk ke keranjang belanja.'
@@ -699,3 +759,4 @@ function myCart() {
 
   </body>
 </html>
+

@@ -1,19 +1,28 @@
 ---
 layout: default
 sidebar_option: sidebar
+value: blogs
 ---
 
-<div class="posts">
+<div class="posts" style="padding-left:0;">
   {% for blog in site.blogs %}
-    <article class="post">
-
+<ion-card>
+    <article class="blog-post">
+  <img class="blog-thumb" src="{{blog.image}}" alt="{{blog.title}}">
+      <div class="blog-desk">
+  <ion-card-header>
       <h1><a href="{{ site.baseurl }}{{ blog.url }}">{{ blog.title }}</a></h1>
-
+</ion-card-header>
+        <ion-card-content>
       <div class="entry">
         {{ blog.excerpt }}
       </div>
-
-      <a href="{{ site.baseurl }}{{ blog.url }}" class="read-more">Read More</a>
+          <ion-buttons style="float:right">
+      <ion-button href="{{ site.baseurl }}{{ blog.url }}">Read More</ion-button>
+            </ion-buttons>
+        </ion-card-content>
+          </div>
     </article>
+  </ion-card>
   {% endfor %}
 </div>

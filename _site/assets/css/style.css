@@ -268,9 +268,11 @@ img {
 }
 @media screen and (max-width: 640px) {
   .box-payment {
-    height: 270px;
+    height: 300px;
     flex-wrap: wrap;
     grid-gap: 12px;
+    overflow: visible;
+    padding-bottom: 20px;
   }
 }
 
@@ -507,7 +509,28 @@ nav a {
 }
 @media screen and (max-width: 640px) {
   .product-post {
-    width: 48%;
+    max-width: 48%;
+  }
+}
+
+.blog-thumb {
+  width: 193px;
+  height: 193px;
+}
+@media screen and (max-width: 640px) {
+  .blog-thumb {
+    display: none;
+    position: absolute;
+  }
+}
+
+.blog-post {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 640px) {
+  .blog-post {
+    flex-wrap: wrap;
   }
 }
 

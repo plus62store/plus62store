@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html>
 {% include head.html %}
@@ -5,12 +9,7 @@
 <ion-app>
 {% include header.html %}
 <ion-content>
-      <ion-refresher slot="fixed" id="refresher">
-        <ion-refresher-content
-      pulling-icon="chevron-down-circle-outline"
-      pulling-text="Pull to refresh"
-      refreshing-text="Refreshing..."></ion-refresher-content>
-      </ion-refresher>
+    {% include refresh.html %}
 <div class="layout-main">
     <div 
 {% if page.sidebar_option == 'sidebar' %}id="main-side"{% endif %}

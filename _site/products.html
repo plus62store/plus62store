@@ -55,11 +55,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script src="/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  
   <script type="module">
-    import { actionSheetController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.actionSheetController = actionSheetController;
+    import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.alertController = alertController;
   </script>
   <script type="module">
     import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -70,7 +70,6 @@
     window.modalController = modalController;
   </script>
 <style>div::-webkit-scrollbar,.app-description-text::-webkit-scrollbar{display:none;}</style>
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -84,16 +83,62 @@
 }
 </script>
     
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/manifest.json">
+
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '791401205101923');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "6d1eb5cd-8c5d-4cf3-aa06-eed9c3e1aee0",
+    });
+  });
+</script>
+
   </head>
 
 <body>
 <ion-app>
 
-    <div class="wrapper-masthead">
+    <div class="wrapper-masthead mobile-hide">
         <ion-header class="masthead clearfix">
-          <a href="/" class="site-avatar"><img src="/assets/logo/icon.svg" /></a>
+          <a href="/" class="site-avatar">
+<img src="/assets/logo/icon.svg" alt="Plus62 Store"/></a>
 
-          <div class="site-info mobile-hide">
+          <div class="site-info">
             <h1 class="site-name"><a href="/">Plus62 Store</a></h1>
             <p class="site-description">Produk & Jasa Bordir Tasikmalaya</p>
           </div>
@@ -106,18 +151,33 @@
    
             <a class="" href="/pembayaran">Payment</a>
    
-            <a href="/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position: relative;top: -6px;left:0;"></ion-badge></a>
+            <a href="/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:0;"></ion-badge></a>
           </nav>
         </ion-header>
     </div>
 
+<ion-header class="just mobile-show">
+<ion-toolbar style="padding: 0 10px;">
+        <ion-avatar>
+        <a href="/products"><img src="/assets/logo/icon.svg" alt="Plus62 Store" /></a>
+        </ion-avatar>
+        <ion-buttons slot="end">
+          <ion-button id="howOrder" color="danger">
+            <ion-icon class="alert" name="notifications-outline"></ion-icon>
+            <ion-badge color="primary" style="position:absolute;top:0px;left:0;border-radius:100%;padding:0 4px;">!</ion-badge>
+          </ion-button>
+        </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
 <ion-content>
-      <ion-refresher slot="fixed" id="refresher">
+          <ion-refresher slot="fixed" id="refresher">
         <ion-refresher-content
       pulling-icon="chevron-down-circle-outline"
-      pulling-text="Pull to refresh"
-      refreshing-text="Refreshing..."></ion-refresher-content>
+      pulling-text="Pull to reload page"
+      refreshing-text="Reloading..."></ion-refresher-content>
       </ion-refresher>
+
 <div class="layout-main">
     <div 
 id="main-side"
@@ -127,12 +187,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-tulip">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/b328e360371fe525dc18747276f31768" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Tulip</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -147,12 +207,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-rosse">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/465836a1d2cbfdd682656a259ebd06e1" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Rosse</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -167,12 +227,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasikmalaya-motif-kucing">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/529aa25edddbda7da170ec2e6488e615" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Kucing</ion-card-subtitle>
-            <div class="diskon">Rp. 22.000</div>
-            <div class="price">Rp. 17.600</div>
+            <div class="display-none diskon">Rp. 17.600</div>
+            <div class="price">Rp. 22.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -187,12 +247,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-bunga-setaman">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/7b1760ae16b5a427c4c9ff32f68a69e4" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Setaman</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -207,12 +267,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/mukena-garcella-rayon-premium">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>12%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>12%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Mukena Garcella</ion-card-subtitle>
-            <div class="diskon">Rp. 185.000</div>
-            <div class="price">Rp. 162.600</div>
+            <div class="display-none diskon">Rp. 162.600</div>
+            <div class="price">Rp. 185.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -227,12 +287,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-3d-bodir-3lapis-tasikmalaya">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>20%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>20%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker 3D Bordir</ion-card-subtitle>
-            <div class="diskon">Rp. 30.000</div>
-            <div class="price">Rp. 24.000</div>
+            <div class="display-none diskon">Rp. 24.000</div>
+            <div class="price">Rp. 30.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -247,12 +307,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasikmalaya-mawar">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Mawar</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -267,12 +327,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-smaya">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/0f895509b187d2da6ae3e06a460841c0" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir sMaya</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -287,12 +347,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-ilalang">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/0031e5ba7ee62316a17ecbd36ec7bff6" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Ilalang</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -307,12 +367,12 @@ id="main-side"
     <article class="product-post">
 <a href="/products/masker-bordir-tasik-dahlia">
 <ion-card class="product-thumb">
-<ion-badge class="discount-badge"><ion-label>22%</ion-label></ion-badge>
+<ion-badge class="display-none discount-badge"><ion-label>22%</ion-label></ion-badge>
     <img src="https://cf.shopee.co.id/file/6549ebebfdff7f4355dc0398f5f5b9e2" />
         <ion-card-header class="product-header">
             <ion-card-subtitle>Masker Bordir Dahlia</ion-card-subtitle>
-            <div class="diskon">Rp. 20.000</div>
-            <div class="price">Rp. 15.600</div>
+            <div class="display-none diskon">Rp. 15.600</div>
+            <div class="price">Rp. 20.000</div>
                 </ion-card-header>
                 <ion-card-content class="product-content">
             <div class="content">
@@ -328,7 +388,24 @@ id="main-side"
 
     </div>
 <div id="sidebar" class="sidebar" role="sidebar" aria-label="Primary Sidebar" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="feature_tw">
+    <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <ion-list>
+      
+        <a href="/blogs/Hello-World">
+        <ion-item>
+    <ion-thumbnail slot="start">
+            <img src="/images/404.jpg">
+    </ion-thumbnail>
+          <ion-label>You're up and running!</ion-label>
+        </ion-item>
+        </a>
+      
+    </ion-list>
+  </div>
+
+
+  <div class="feature_tw js-sticky-widget">
 <div class="wrapper grid section" id="tw_feature" name="Fitur Toko">
 <div class="widget" data-version="1" id="HTML201" style="padding-top:4%;">
 <div class="icon">
@@ -369,24 +446,7 @@ id="main-side"
 </div>
 </div>
 
-    <ion-card class="widget">
-    <ion-card-content>
-    <h3 class="widget-title">Recent Posts</h3>
-    <ion-list>
-      
-        <a href="/blogs/Hello-World">
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="/images/404.jpg">
-          </ion-avatar>
-          <ion-label>You're up and running!</ion-label>
-        </ion-item>
-        </a>
-      
-    </ion-list>
-    </ion-card-content>
-  </ion-card>
-
+    
 </div>
 
 </div>
@@ -501,21 +561,21 @@ function myBri() {
       <div class="container">
         <ion-footer>
           
-     <ion-segment color="tertiary" value="">
+     <ion-segment color="tertiary" value="products">
     
-        <ion-segment-button value="products active" onClick="window.location.href='/products'">
+        <ion-segment-button value="products" onClick="window.location.href='/products'">
           <ion-label>Products</ion-label>
         </ion-segment-button>
    
-        <ion-segment-button value="blogs active" onClick="window.location.href='/blogs'">
+        <ion-segment-button value="blogs" onClick="window.location.href='/blogs'">
           <ion-label>Blogs</ion-label>
         </ion-segment-button>
    
-        <ion-segment-button value="payment active" onClick="window.location.href='/pembayaran'">
+        <ion-segment-button value="payment" onClick="window.location.href='/pembayaran'">
           <ion-label>Payment</ion-label>
         </ion-segment-button>
    
-        <ion-segment-button value="cart active" onClick="window.location.href='/cart'">
+        <ion-segment-button value="cart" onClick="window.location.href='/cart'">
           <ion-label>Cart</ion-label>
         </ion-segment-button>
    
@@ -525,6 +585,23 @@ function myBri() {
       </div>
     </ion-toolbar>
 
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <span class="mb-3">
+            Assalamualaikum! lengkapi data berikut
+        </span>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Pertanyaan</ion-label>
+            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
+        </ion-item>
+        <div class="mb-0 text-right">
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
+        </div>
+    </form>
 
 </ion-app>
     
@@ -547,6 +624,7 @@ function myBri() {
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <script src="/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/jquery-2.2.4.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/simpleCart.js"></script>
     <script async src="https://storage.googleapis.com/p62s/js/main.js"></script>
@@ -559,7 +637,22 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
   </script>
 
     
+<script>
+    var button = document.querySelector('#howOrder');
+    button.addEventListener('click', handleButtonClick);
+
+    async function handleButtonClick() {
+      const alert = await alertController.create({
+        header: '',
+        message: 'Web Store Sedang Tahap Pengembangan',
+        buttons: ['Oke']
+      });
+
+      await alert.present();
+    }
+  </script>
 
 
   </body>
 </html>
+

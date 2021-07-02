@@ -1,6 +1,7 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <script src="{{site.baseurl}}/fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/jquery-2.2.4.min.js"></script>
     <script src="https://storage.googleapis.com/p62s/js/simpleCart.js"></script>
     <script async src="https://storage.googleapis.com/p62s/js/main.js"></script>
@@ -18,29 +19,28 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
     {% if page.url == '/checkout/' %}
     <script async src="https://storage.googleapis.com/p62s/js/checkout.js"></script>
     {% endif %}
-{% if page.layout == "product" %}
 <script>
     var button = document.querySelector('#howOrder');
     button.addEventListener('click', handleButtonClick);
 
     async function handleButtonClick() {
-      const actionSheet = await actionSheetController.create({
-        header: '{{site.breakingNews}}',
-        buttons: [
-          { text: 'Tutup', role: 'cancel' }
-        ]
+      const alert = await alertController.create({
+        header: '',
+        message: '{{site.breakingNews}}',
+        buttons: ['Oke']
       });
 
-      await actionSheet.present();
+      await alert.present();
     }
   </script>
+{% if page.layout == "product" %}
   <script>
     var id = document.querySelector('#cartButton');
     id.addEventListener('click', handleButtonClick);
 
     async function handleButtonClick() {
       const toast = await toastController.create({
-        color: 'success',
+        color: 'dark',
         duration: 2500,
         position: 'bottom',
         message: '{{ page.title }}, berhasil masuk ke keranjang belanja.'
