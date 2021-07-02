@@ -14,7 +14,7 @@
     <title>{{site.title}}</title>
     <meta name="title" content="{{site.title}}">
     <meta name="description" content="{{site.description}}">
-
+    {% include fav.html %}
     {% if page.layout == "default" %}
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -41,9 +41,8 @@
     <meta property="product:price:amount" content="{{ page.price }}">
     <meta property="product:price:currency" content="IDR">
     <meta property="product:retailer_item_id" content="{{page.sku}}">
-    <meta property="product:item_group_id" content="{{page.categories}}">
+    <meta property="product:item_group_id" content="{{page.noID}}">
     {% endif %}
-    {% include fav.html %}
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
