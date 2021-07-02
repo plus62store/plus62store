@@ -15,6 +15,7 @@
     <meta name="title" content="{{site.title}}">
     <meta name="description" content="{{site.description}}">
 
+    {% if page.layout == "default" %}
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{site.url}}">
@@ -28,6 +29,20 @@
     <meta property="twitter:title" content="{{site.title}}">
     <meta property="twitter:description" content="{{site.description}}">
     <meta property="twitter:image" content="https://storage.googleapis.com/p62s/img/logo.png">
+    {% endif %}
+    {% if page.layout == "product" %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="https://shop.plus62store.my.id{{page.url}}">
+    <meta property="og:image" content="{{ page.image }}">
+    <meta property="product:brand" content="Plus62Bordir">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:condition" content="new">
+    <meta property="product:price:amount" content="{{ page.price }}">
+    <meta property="product:price:currency" content="IDR">
+    <meta property="product:retailer_item_id" content="{{page.sku}}">
+    <meta property="product:item_group_id" content="{{page.categories}}">
+    {% endif %}
     {% include fav.html %}
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
