@@ -11,7 +11,7 @@ icon: ui-1_simple-remove
 rating: 4.9
 rC: 29
 riv: 130
-sku: 3Dmask
+sku: masker3D
 mpn: p62s-2154
 noID: i.226754372.9014129020
 stars: star

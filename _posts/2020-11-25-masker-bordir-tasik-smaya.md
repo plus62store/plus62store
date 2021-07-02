@@ -10,7 +10,7 @@ icon: ui-1_check
 rating: 5.0
 rC: 150
 riv: 493
-sku: simaya
+sku: smaya
 mpn: p62s-2200
 noID: i.226754372.3554451614
 stars: star

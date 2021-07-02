@@ -11,7 +11,7 @@ icon: ui-1_simple-remove
 rating: 5.0
 rC: 180
 riv: 250
-sku: mawar
+sku: bordirkucing
 mpn: p62s-2143
 noID: i.226754372.8705962853
 stars: star
