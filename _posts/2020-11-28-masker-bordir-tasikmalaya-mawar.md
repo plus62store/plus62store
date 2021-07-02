@@ -45,6 +45,15 @@ styles:
     image_path: https://cf.shopee.co.id/file/d0d90956a94cb43d18bb04424d4e780c
 image: 'https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e'
 facebook_image_path:
+- https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e
+- https://cf.shopee.co.id/file/d0d90956a94cb43d18bb04424d4e780c
+- https://cf.shopee.co.id/file/bde1ebbe6e340a3a7fd44f0adde95e33
+- https://cf.shopee.co.id/file/7b69c1d03babe7d14dda91d0af2ddb27
+- https://cf.shopee.co.id/file/e01251e894b4de16a5195be5a9967388
+- https://cf.shopee.co.id/file/9c6c6c2775cde8bb1e1fccd2d8c05547
+- https://cf.shopee.co.id/file/99ac78ba6ab2e6cbbd7e5eea3e7a0b3c
+- https://cf.shopee.co.id/file/857494984bfb05f7b9fac6b02032a784
+- https://cf.shopee.co.id/file/cb4eb041c407779ad49d2e9d5b2b9320
 display: block
 ---
 

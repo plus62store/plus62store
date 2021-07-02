@@ -31,6 +31,10 @@ styles:
     image_path: https://cf.shopee.co.id/file/f3d6e1490cf857c9157510583ab681aa
 image: 'https://cf.shopee.co.id/file/529aa25edddbda7da170ec2e6488e615'
 facebook_image_path:
+- https://cf.shopee.co.id/file/529aa25edddbda7da170ec2e6488e615
+- https://cf.shopee.co.id/file/4729d11c1ff0c73f991ec5d3fb68fe74
+- https://cf.shopee.co.id/file/9add457c9abbb638eeed99c601075160
+- https://cf.shopee.co.id/file/f3d6e1490cf857c9157510583ab681aa
 display: block
 ---
 
