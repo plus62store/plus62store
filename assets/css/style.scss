@@ -471,7 +471,7 @@ nav {
     margin: 0;}
 
     @include ipad {
-    width: 342px;}
+    max-width: 342px;}
 
     @include pro {
     width: 241px;}
