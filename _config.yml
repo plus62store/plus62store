@@ -21,7 +21,7 @@ baseurl: ""
 permalink: products/:title
 
 collections:
-  blogs:
+  blog-post:
     output: true
 
 defaults:
@@ -34,7 +34,7 @@ defaults:
   values:
     layout: page
 - scope:
-    type: blogs
+    type: blog-post
   values:
     layout: post
 

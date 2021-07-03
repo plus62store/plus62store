@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/blogs/Hello-World</loc>
-<lastmod>2021-07-03T01:50:35+07:00</lastmod>
+<loc>http://localhost:4000/blog-post/Download-Wilcom-ES2006-sp4-Windows7-32bit</loc>
+<lastmod>2021-07-03T23:25:50+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog-post/Wilcom-Es-2006-Security-Device-Has-Timed-Out</loc>
+<lastmod>2021-07-03T23:25:50+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog-post/cara-membuat-bordiran</loc>
+<lastmod>2021-07-03T23:25:50+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog-post/sejarah-bordir-tasikmalaya</loc>
+<lastmod>2021-07-03T23:25:50+07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/products/masker-bordir-tasik-dahlia</loc>
@@ -48,7 +60,7 @@
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blogs</loc>
+<loc>http://localhost:4000/blog-post</loc>
 </url>
 <url>
 <loc>http://localhost:4000/cart</loc>

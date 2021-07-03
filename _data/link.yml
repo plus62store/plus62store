@@ -5,7 +5,7 @@
   color: danger
 
 - title: Payment
-  value: blogs
+  value: payment
   url: /pembayaran
   icon: cash-outline
   color: success

@@ -3,7 +3,7 @@
   url: /products
 - title: Blogs
   value: blogs
-  url: /blogs
+  url: /blog-post
 - title: Payment
   value: payment
   url: /pembayaran
