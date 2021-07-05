@@ -1,0 +1,27 @@
+
+      <div class="aside-category">
+    {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+            <ion-card-header>
+<ion-title>{{ category_name }}</ion-title>
+            </ion-card-header>
+        <a name="{{ category_name | slugize }}"></a>
+        {% for post in site.categories[category_name] %}
+            <ion-list>
+<a href="{{ site.baseurl }}{{ post.url }}">
+              <ion-item>
+                <ion-avatar slot="start">
+                  <ion-img src="{{post.image}}"/>
+                </ion-avatar>
+                <ion-label>
+                    <h2>{{post.title}}</h2>
+                    <h3>IDR.{{post.price}}</h3>
+                    <small><ion-icon style="color:#ffb200;" name="star"></ion-icon> {{post.rating}} / 5</small>
+                </ion-label>
+                </ion-avatar>
+              </ion-item></a>
+            </ion-list>
+        {% endfor %}
+    {% endfor %}
+    </div>

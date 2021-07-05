@@ -7,7 +7,7 @@ value: products
 <div class="posts">
   {% for post in site.posts %}
     <article class="product-post">
-<a href="{{ site.baseurl }}{{ post.url }}">
+<ion-router-link href="{{ site.baseurl }}{{ post.url }}">
 <ion-card class="product-thumb">
 <ion-badge class="display-none discount-badge"><ion-label>{{post.diskon}}</ion-label></ion-badge>
     <img src="{{ post.image }}" />
@@ -23,7 +23,7 @@ value: products
             </div>
         </ion-card-content>
 </ion-card>
-</a>
+</ion-router-link>
     </article>
   {% endfor %}
 </div>

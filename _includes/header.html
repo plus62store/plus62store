@@ -1,19 +1,19 @@
 
     <div class="wrapper-masthead mobile-hide">
         <ion-header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar">
-<img src="{{ site.avatar }}" alt="{{site.title}}"/></a>
+          <ion-router-link href="{{ site.baseurl }}/products" class="site-avatar">
+<img src="{{ site.avatar }}" alt="{{site.title}}"/></ion-router-link>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <h1 class="site-name"><ion-router-link href="{{ site.baseurl }}/products">{{ site.title }}</ion-router-link></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
           <nav class="mobile-hide">
     {% for segment in site.data.nav %}
-            <a class="{% if segment.url == page.url %} active{% endif %}" href="{{ segment.url }}">{{ segment.title }}</a>
+            <ion-router-link class="{% if segment.url == page.url %} active{% endif %}" href="{{ segment.url }}"><ion-chip outline color="primary"><ion-label>{{ segment.title }}</ion-label></ion-chip></ion-router-link>
    {% endfor %}
-            <a href="{{ site.baseurl }}/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:0;"></ion-badge></a>
+            <ion-router-link href="{{ site.baseurl }}/cart" id="cart-menu"><ion-chip outline color="primary"><ion-label>Cart</ion-label></ion-chip><ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:-15px;"></ion-badge></ion-router-link>
           </nav>
         </ion-header>
     </div>
@@ -21,7 +21,7 @@
 <ion-header class="just mobile-show">
 <ion-toolbar style="padding: 0 10px;">
         <ion-avatar>
-        <a href="{{ site.baseurl }}/products"><img src="{{ site.avatar }}" alt="{{site.title}}" /></a>
+        <ion-router-link href="{{ site.baseurl }}/products"><img src="{{ site.avatar }}" alt="{{site.title}}" /></ion-router-link>
         </ion-avatar>
         <ion-buttons slot="end">
           <ion-button id="howOrder" color="danger">

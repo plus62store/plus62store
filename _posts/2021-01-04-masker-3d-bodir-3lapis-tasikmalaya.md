@@ -5,8 +5,8 @@ categories: masker-bordir
 price: '30.000'
 diskon: 20%
 discount: '24.000'
-stok: Stok Habis
-outstock: disabled
+stok: Stok Tersedia
+outstock: 
 icon: ui-1_simple-remove
 rating: 4.9
 rC: 29

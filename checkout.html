@@ -37,8 +37,8 @@ sitemap: false
           <ion-input id="kota" class="kota wajib" placeholder="Kota"></ion-input>
           <ion-input id="provinsi" class="provinsi wajib" placeholder="Provinsi"></ion-input>
           <ion-input id="kodepos" class="kodepos wajib" placeholder="Kode Pos"></ion-input>
-        </ion-item><br/><p/>
-      <a type="ion-button" id='order' class="button-primary order" color="success" style="float:right;">Send Order</a>
+        </ion-item><br/>
+      <ion-router-link id='order' class="order" color="success" style="float:right;cursor:pointer;">Send Order</ion-router-link>
 </form>
       <div id='recaptcha' class="g-recaptcha"
           data-sitekey="{{site.reCAPTCHA-key}}"

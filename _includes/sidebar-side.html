@@ -2,14 +2,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <ion-list>
       {% for blog in site.blog-post limit:1 %}
-        <a href="{{ blog.url }}">
+        <ion-router-link href="{{ blog.url }}">
         <ion-item>
     <ion-thumbnail slot="start">
             <img src="{{ blog.img }}">
     </ion-thumbnail>
           <ion-label>{{ blog.title }}</ion-label>
         </ion-item>
-        </a>
+        </ion-router-link>
       {% endfor %}
     </ion-list>
   </div>

@@ -109,23 +109,23 @@
 
     <div class="wrapper-masthead mobile-hide">
         <ion-header class="masthead clearfix">
-          <a href="/" class="site-avatar">
-<img src="/assets/logo/icon.svg" alt="Plus62 Store"/></a>
+          <ion-router-link href="/products" class="site-avatar">
+<img src="/assets/logo/icon.svg" alt="Plus62 Store"/></ion-router-link>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="/">Plus62 Store</a></h1>
+            <h1 class="site-name"><ion-router-link href="/products">Plus62 Store</ion-router-link></h1>
             <p class="site-description">Produk & Jasa Bordir Tasikmalaya</p>
           </div>
 
           <nav class="mobile-hide">
     
-            <a class="" href="/products">Products</a>
+            <ion-router-link class="" href="/products"><ion-chip outline color="primary"><ion-label>Products</ion-label></ion-chip></ion-router-link>
    
-            <a class="" href="/blog-post">Blogs</a>
+            <ion-router-link class="" href="/blog-post"><ion-chip outline color="primary"><ion-label>Blogs</ion-label></ion-chip></ion-router-link>
    
-            <a class="" href="/pembayaran">Payment</a>
+            <ion-router-link class="" href="/pembayaran"><ion-chip outline color="primary"><ion-label>Payment</ion-label></ion-chip></ion-router-link>
    
-            <a href="/cart" id="cart-menu">Cart<ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:0;"></ion-badge></a>
+            <ion-router-link href="/cart" id="cart-menu"><ion-chip outline color="primary"><ion-label>Cart</ion-label></ion-chip><ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:-15px;"></ion-badge></ion-router-link>
           </nav>
         </ion-header>
     </div>
@@ -133,7 +133,7 @@
 <ion-header class="just mobile-show">
 <ion-toolbar style="padding: 0 10px;">
         <ion-avatar>
-        <a href="/products"><img src="/assets/logo/icon.svg" alt="Plus62 Store" /></a>
+        <ion-router-link href="/products"><img src="/assets/logo/icon.svg" alt="Plus62 Store" /></ion-router-link>
         </ion-avatar>
         <ion-buttons slot="end">
           <ion-button id="howOrder" color="danger">
@@ -217,14 +217,14 @@ Semoga artikel ini bermanfaat.Jangan sungkan memberikan masukan atau saran pada 
     <h3 class="widget-title">Recent Posts</h3>
     <ion-list>
       
-        <a href="/blog-post/Download-Wilcom-ES2006-sp4-Windows7-32bit">
+        <ion-router-link href="/blog-post/Download-Wilcom-ES2006-sp4-Windows7-32bit">
         <ion-item>
     <ion-thumbnail slot="start">
             <img src="https://1.bp.blogspot.com/-skBBP4BrkB4/X5MYpYhsO8I/AAAAAAAAF1Y/rYLQ_hkHK48X-ybLuM9KoqOKVHEfSp7tgCPcBGAsYHg/s720/IMG_20201024_003338.jpg">
     </ion-thumbnail>
           <ion-label>Download Wilcom ES2006 sp4 Windows7</ion-label>
         </ion-item>
-        </a>
+        </ion-router-link>
       
     </ion-list>
   </div>
