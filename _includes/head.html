@@ -9,7 +9,6 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-
     <!-- Primary Meta Tags -->
     <title>{{site.title}}</title>
     <meta name="title" content="{{site.title}}">
@@ -30,10 +29,11 @@
     <meta property="twitter:description" content="{{site.description}}">
     <meta property="twitter:image" content="https://storage.googleapis.com/p62s/img/logo.png">
     {% endif %}
+    <!-- Products FB Meta Tags -->
     {% if page.layout == "product" %}
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.description }}">
-    <meta property="og:url" content="https://shop.plus62store.my.id{{page.url}}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
     <meta property="og:image" content="{{ page.image }}">
     <meta property="product:brand" content="Plus62Bordir">
     <meta property="product:availability" content="in stock">
@@ -71,7 +71,7 @@
 {
   "@context": "https://schema.org/",
   "@type": "WebSite",
-  "url": "https://shop.plus62store.my.id",
+  "url": "{{site.url}}",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "/search?keyword={search_term_string}",
@@ -93,7 +93,7 @@
     "price": "{{ page.price }}",
     "sale_price": "{{ page.discount }}",
     "availability": "https://schema.org/InStock",
-    "url": "https://shop.plus62store.my.id{{page.url}}",
+    "url": "{{site.url}}{{page.url}}",
     "priceValidUntil": "2022-01-01T00:00:00.000Z"
   },
   "aggregateRating": {
@@ -120,7 +120,6 @@
 </script>
     {% endif %}
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-    {% include fav.html %}
     {% include fb-pixel.html %}
     {% include onesignal.html %}
   </head>
