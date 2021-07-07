@@ -825,6 +825,16 @@ ion-icon.wa, .alert, .cart-outline, .more {
   }
 }
 
+.admin {
+  width: 400px;
+  margin: auto;
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .admin {
+    width: auto;
+  }
+}
+
 .copyRight {
   padding: 20px 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);

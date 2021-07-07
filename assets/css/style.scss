@@ -663,7 +663,11 @@ ion-icon.wa,.alert,.cart-outline,.more{
     margin-left: auto;}
 }
 
-
+.admin{width:400px;
+       margin:auto;
+    @include mobile {
+    width:auto;}
+}
 
 .copyRight {
     padding: 20px 10px;
