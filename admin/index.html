@@ -1,0 +1,27 @@
+---
+layout: page
+permalink: /admin
+---
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    
+<ion-card style="margin:auto;width:400px;">
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-xs="12">
+          <div text-center style="text-align:center;">
+            <ion-card-header><h3>Login ADMIN</h3></ion-card-header>
+          </div>
+          <ion-card-content>
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="admin@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password Admin" ngModel required></ion-input>
+            </ion-item>
+          <div padding style="padding-top:35px;">
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+          </div>
+          </ion-card-cantent>
+        </ion-col>
+      </ion-row>
+</ion-card>
+  </form>
