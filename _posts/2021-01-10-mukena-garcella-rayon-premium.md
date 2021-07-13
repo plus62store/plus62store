@@ -2,6 +2,7 @@
 title: Mukena Garcella
 description: Material -Rayon Premium, -Renda Giffer Premium. -1Set Mukena, Rok & Tas
 categories: mukena-garcella
+tags: Terbaru
 price: '185.000'
 diskon: 12%
 discount: '162.600'

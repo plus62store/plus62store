@@ -2,6 +2,7 @@
 title: Masker 3D Bordir
 description: Masker3D Bordir, 3Lapisan kain,
 categories: masker-bordir
+tags: Terbaru Terlaris
 price: '30.000'
 diskon: 20%
 discount: '24.000'

@@ -2,6 +2,7 @@
 title: Masker Bordir Kucing
 description: Masker bordir motif kucing, bahan premium katun
 categories: masker-bordir
+tags: Terbaru
 price: '22.000'
 diskon: 22%
 discount: '17.600'

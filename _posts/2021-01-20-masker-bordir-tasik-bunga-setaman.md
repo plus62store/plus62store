@@ -2,6 +2,7 @@
 title: Masker Bordir Setaman
 description: Bahan kain 100% Katun dengan 3 lapisan,
 categories: masker-bordir
+tags: Terbaru
 price: '20.000'
 diskon: 22%
 discount: '15.600'

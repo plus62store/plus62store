@@ -1,27 +1,38 @@
 
-      <div class="aside-category">
-    {% for category in site.categories %}
+    {% for category in site.tags %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="#{{ category_name | slugize }}"></div>
-            <ion-card-header>
-<ion-title>{{ category_name }}</ion-title>
-            </ion-card-header>
-        <a name="{{ category_name | slugize }}"></a>
-        {% for post in site.categories[category_name] %}
-            <ion-list>
-<a href="{{ site.baseurl }}{{ post.url }}">
-              <ion-item>
-                <ion-avatar slot="start">
-                  <ion-img src="{{post.image}}"/>
-                </ion-avatar>
-                <ion-label>
-                    <h2>{{post.title}}</h2>
-                    <h3>IDR.{{post.price}}</h3>
-                    <small><ion-icon style="color:#ffb200;" name="star"></ion-icon> {{post.rating}} / 5</small>
-                </ion-label>
-                </ion-avatar>
-              </ion-item></a>
-            </ion-list>
+        <p></p>
+      <div class="container">
+<ion-note>
+    <ion-lable>{{ category_name }}</ion-label>
+</ion-note></div>
+        <p></p>
+        <ion-router-link name="{{ category_name | slugize }}"></ion-router-link>
+<div class="posts">
+        {% for post in site.tags[category_name] %}
+    <article class="product-post">
+<ion-router-link href="{{ site.baseurl }}{{ post.url }}">
+<ion-card class="product-thumb">
+<ion-badge class="display-none discount-badge"><ion-label>{{post.diskon}}</ion-label></ion-badge>
+    <img src="{{ post.image }}" />
+        <ion-card-header class="product-header">
+            <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
+            <div class="display-none diskon">Rp. {{ post.discount }}</div>
+            <div class="price">Rp. {{ post.price }}</div>
+                </ion-card-header>
+                <ion-card-content class="product-content">
+            <div class="content">
+    <div class="sale">{{post.riv}} Terjual</div>
+    <div class="rate"><ion-icon name="star" style="color:#f3ae0f;"></ion-icon> {{ post.rating }}</div>
+            </div>
+        </ion-card-content>
+</ion-card>
+</ion-router-link>
+    </article>
         {% endfor %}
+      </div>
     {% endfor %}
-    </div>
+<div id="sidebar" class="sidebar mobile-hide" style="position:fixed;top:196px;right:94px;">
+{% include widget.html %}
+</div>
