@@ -446,7 +446,7 @@ nav {
 }
 
 .blog-thumb {
-    width: 193px;
+    min-width: 300px;
     height: 193px;
 
     @include mobile {
