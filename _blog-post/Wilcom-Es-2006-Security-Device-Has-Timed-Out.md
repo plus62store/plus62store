@@ -1,7 +1,7 @@
 ---
 sidebar_option: sidebar
 img: https://1.bp.blogspot.com/-WAXDCl6E0cA/X424RdO-zTI/AAAAAAAAFvw/R8QvOZ6ActYeoHM1kG-AKFp3xU2OPC2MQCLcBGAsYHQ/s1280/securitydevicetimeout.jpg
-title: Wilcom Es 2006 Security Device Has Timed Out
+title: Wilcom Security Device Has Timed Out
 author: NdanG
 excerpt_separator: <!--more-->
 ---
