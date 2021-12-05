@@ -52,7 +52,9 @@ function {{link.value}}() {
     </ion-footer>
 <div id="cartModal" class="display-none">
 <ion-card class="cartModal">
-    <ion-icon class="closeModal" name="close-circle-outline" id="modal"></ion-icon>
+        <ion-buttons slot="start" id="modal">
+    <ion-icon class="closeModal" name="close-circle-outline"></ion-icon>
+        </ion-buttons>
   {% include keranjang.html %}
 </ion-card>
 </div>
