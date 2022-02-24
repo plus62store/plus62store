@@ -54,7 +54,7 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="Plus62 Store - Produk & Jasa Bordir Tasikmalaya" href="http://localhost:4000/feed.xml" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<link href="/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
   
@@ -176,7 +176,7 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
 <ion-app>
 
     <div class="wrapper-masthead mobile-hide">
-        <ion-header class="masthead clearfix">
+        <ion-header class="masthead clearfix" id="navbar">
           <ion-router-link href="/products" class="site-avatar">
 <img src="/assets/logo/icon.svg" alt="Plus62 Store"/></ion-router-link>
 
@@ -457,15 +457,17 @@ function privacyPolicy() {
    
       </ion-toolbar>
       <ion-toolbar class="toolsbar-container">
-        <ion-buttons slot="start">
+        <ion-buttons slot="start" style="display:none;">
         <ion-button size="small" color="success" data-fancybox="" data-src="#whatsapp" href="javascript:;">
             <ion-icon class="wa" name="logo-whatsapp"></ion-icon></ion-button>
         </ion-buttons>
-        <ion-buttons slot="start" id="modal">
-        <ion-button color="primary">
-            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-button>
-            <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
+        <ion-buttons slot="start" id="modal" style="width: 50px;overflow: hidden;">
+        <ion-button color="primary" onclick="setModal(true)" id="bagBtn">
+            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-icon></ion-button>
+        <ion-button color="primary" onclick="setModal(false)" id="xBtn">
+<ion-icon class="cart-outline" name="close-outline"></ion-button>
         </ion-buttons>
+            <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
         <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" ><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
 <script type="text/javascript">
   $('#item_add').click(function() {
@@ -484,6 +486,9 @@ function privacyPolicy() {
     </ion-footer>
 <div id="cartModal" class="display-none">
 <ion-card class="cartModal">
+        <ion-buttons slot="end" id="modal">
+    <ion-icon class="closeModal" name="close-circle-outline"></ion-icon>
+        </ion-buttons>
   
 <style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
@@ -661,7 +666,7 @@ function myBri() {
             <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="float: right;"></ion-icon></a>
         </div>
     </form>
 
@@ -669,7 +674,7 @@ function myBri() {
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
-    <script src="/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="/assets/js/jquery-3.6.0.js"></script>
     <script src="/assets/js/simpleCart.js"></script>
     <script async src="/assets/js/main.js"></script>
@@ -735,6 +740,22 @@ function myCart() {
 }
 </script>
 
+<script>
+ function setModal(modalBtn) {
+        var bagBtn = document.getElementById('bagBtn')
+        var xBtn = document.getElementById('xBtn')
+
+        if(modalBtn) {
+            xBtn.style.display = "block"
+            bagBtn.style.display = "none"
+        } else {
+            xBtn.style.display = "none"
+            bagBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("modalBtn");
+    }
+</script>
 
   </body>
 </html>

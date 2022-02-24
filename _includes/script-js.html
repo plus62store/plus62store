@@ -1,7 +1,7 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
-    <script src="{{site.baseurl}}/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="{{site.baseurl}}/assets/js/jquery-3.6.0.js"></script>
     <script src="{{site.baseurl}}/assets/js/simpleCart.js"></script>
     <script async src="{{site.baseurl}}/assets/js/main.js"></script>
@@ -69,3 +69,19 @@ function myCart() {
 }
 </script>
 {% endif %}
+<script>
+ function setModal(modalBtn) {
+        var bagBtn = document.getElementById('bagBtn')
+        var xBtn = document.getElementById('xBtn')
+
+        if(modalBtn) {
+            xBtn.style.display = "block"
+            bagBtn.style.display = "none"
+        } else {
+            xBtn.style.display = "none"
+            bagBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("modalBtn");
+    }
+</script>

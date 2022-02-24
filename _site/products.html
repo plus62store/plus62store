@@ -56,7 +56,7 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="Plus62 Store - Produk & Jasa Bordir Tasikmalaya" href="http://localhost:4000/feed.xml" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<link href="/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
   
@@ -124,7 +124,7 @@
 <ion-app>
 
     <div class="wrapper-masthead mobile-hide">
-        <ion-header class="masthead clearfix">
+        <ion-header class="masthead clearfix" id="navbar">
           <ion-router-link href="/products" class="site-avatar">
 <img src="/assets/logo/icon.svg" alt="Plus62 Store"/></ion-router-link>
 
@@ -589,7 +589,7 @@ function myBri() {
             <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="float: right;"></ion-icon></a>
         </div>
     </form>
 
@@ -597,7 +597,7 @@ function myBri() {
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
-    <script src="/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="/assets/js/jquery-3.6.0.js"></script>
     <script src="/assets/js/simpleCart.js"></script>
     <script async src="/assets/js/main.js"></script>
@@ -624,6 +624,22 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
     }
   </script>
 
+<script>
+ function setModal(modalBtn) {
+        var bagBtn = document.getElementById('bagBtn')
+        var xBtn = document.getElementById('xBtn')
+
+        if(modalBtn) {
+            xBtn.style.display = "block"
+            bagBtn.style.display = "none"
+        } else {
+            xBtn.style.display = "none"
+            bagBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("modalBtn");
+    }
+</script>
 
   </body>
 </html>
