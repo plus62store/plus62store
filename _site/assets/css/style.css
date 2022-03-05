@@ -473,6 +473,7 @@ img {
 
 .site-info {
   float: left;
+  padding-top: 16px;
 }
 @media (min-width: 320px) and (max-width: 767.98px) {
   .site-info {
@@ -529,6 +530,11 @@ nav a {
     margin: 0 10px;
     color: #4183C4;
   }
+}
+
+.text-right {
+  margin-top: 15px;
+  float: right;
 }
 
 .button-primary {

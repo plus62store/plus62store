@@ -462,11 +462,11 @@ function privacyPolicy() {
         </ion-buttons>
         <ion-buttons slot="start" id="modal" style="width: 50px;overflow: hidden;">
         <ion-button color="primary" onclick="setModal(true)" id="bagBtn">
-            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-icon></ion-button>
+            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-button>
         <ion-button color="primary" onclick="setModal(false)" id="xBtn">
-<ion-icon class="cart-outline" name="close-outline"></ion-button>
+<ion-icon class="cart-outline" name="close-outline"></ion-icon></ion-button>
         </ion-buttons>
-            <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
+            <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
         <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" ><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
 <script type="text/javascript">
   $('#item_add').click(function() {
@@ -651,18 +651,18 @@ function myBri() {
     </script>
 
 
-<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form id='whatsapp'>
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;border-radius: 5px;" validate-form id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <span class="mb-3">
             Assalamualaikum! lengkapi data berikut
         </span>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
-            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
-            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
+            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
             <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="float: right;"></ion-icon></a>
@@ -754,6 +754,35 @@ function myCart() {
 
         document.body.classList.toggle("modalBtn");
     }
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+  if ($('#sidesticky').length) {
+    var el = $('#sidesticky');
+    var stickyTop = $('#sidesticky').offset().top;
+    var stickyHeight = $('#sidesticky').height();
+    $(window).scroll(function() {
+      var limit = $('#sticky-stop').offset().top - stickyHeight - 120;
+      var windowTop = $(window).scrollTop();
+      if (stickyTop < windowTop) {
+        el.css({
+          position: 'fixed',
+          top: 20
+        });
+      } else {
+        el.css('position', 'static');
+      }
+      if (limit < windowTop) {
+        var diff = limit - windowTop;
+        el.css({
+          top: diff
+        });
+      }
+    });
+  }
+});
+//]]>
 </script>
 
   </body>

@@ -201,7 +201,7 @@ id="main-side"
   </div>
 
 
-  <div class="feature_tw js-sticky-widget">
+  <div class="feature_tw js-sticky-widget" id="sidesticky">
 <div class="wrapper grid section" id="tw_feature" name="Fitur Toko">
 <div class="widget" data-version="1" id="HTML201" style="padding-top:4%;">
 <div class="icon">
@@ -247,7 +247,7 @@ id="main-side"
 
 </div>
 
-<ion-toolbar class="widgetCopyright">
+<ion-toolbar class="widgetCopyright" id="sticky-stop">
 <div class="wrapper">
 <div class="grid1 widgetFooter section" id="tw_wFooter" name="Widget Footer"><div class="widget HTML" data-version="1" id="HTML301">
 <h3 itemprop="name">Alamat Kami</h3>
@@ -381,18 +381,18 @@ function myBri() {
       </div>
     </ion-toolbar>
 
-<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;" validate-form id='whatsapp'>
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;border-radius: 5px;" validate-form id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <span class="mb-3">
             Assalamualaikum! lengkapi data berikut
         </span>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
-            <ion-input class='nama wajib' placeholder='Nama Lengkap' type="text" highlight-color="success"></ion-input>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
-            <ion-textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;"></ion-textarea>
+            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
             <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="float: right;"></ion-icon></a>
@@ -445,6 +445,35 @@ const _0x385c=['uvf1D3O','tMPfvKi','w14GxsSPkYKRwW','ALjUB0i','yLneyuy','AMHIAha
 
         document.body.classList.toggle("modalBtn");
     }
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+  if ($('#sidesticky').length) {
+    var el = $('#sidesticky');
+    var stickyTop = $('#sidesticky').offset().top;
+    var stickyHeight = $('#sidesticky').height();
+    $(window).scroll(function() {
+      var limit = $('#sticky-stop').offset().top - stickyHeight - 120;
+      var windowTop = $(window).scrollTop();
+      if (stickyTop < windowTop) {
+        el.css({
+          position: 'fixed',
+          top: 20
+        });
+      } else {
+        el.css('position', 'static');
+      }
+      if (limit < windowTop) {
+        var diff = limit - windowTop;
+        el.css({
+          top: diff
+        });
+      }
+    });
+  }
+});
+//]]>
 </script>
 
   </body>

@@ -85,3 +85,32 @@ function myCart() {
         document.body.classList.toggle("modalBtn");
     }
 </script>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+  if ($('#sidesticky').length) {
+    var el = $('#sidesticky');
+    var stickyTop = $('#sidesticky').offset().top;
+    var stickyHeight = $('#sidesticky').height();
+    $(window).scroll(function() {
+      var limit = $('#sticky-stop').offset().top - stickyHeight - 120;
+      var windowTop = $(window).scrollTop();
+      if (stickyTop < windowTop) {
+        el.css({
+          position: 'fixed',
+          top: 20
+        });
+      } else {
+        el.css('position', 'static');
+      }
+      if (limit < windowTop) {
+        var diff = limit - windowTop;
+        el.css({
+          top: diff
+        });
+      }
+    });
+  }
+});
+//]]>
+</script>

@@ -361,6 +361,7 @@ img {
 
 .site-info {
   float: left;
+  padding-top: 16px;
 
   @include mobile {
     float: none;
@@ -414,6 +415,11 @@ nav {
       color: $blue;
     }
   }
+}
+
+.text-right {
+    margin-top: 15px;
+    float: right;
 }
 
 .button-primary {

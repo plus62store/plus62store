@@ -31,11 +31,11 @@ function {{link.value}}() {
         </ion-buttons>
         <ion-buttons slot="start" id="modal" style="width: 50px;overflow: hidden;">
         <ion-button color="primary" onclick="setModal(true)" id="bagBtn">
-            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-icon></ion-button>
+            <ion-icon class="cart-outline" name="bag-outline"></ion-icon></ion-button>
         <ion-button color="primary" onclick="setModal(false)" id="xBtn">
-<ion-icon class="cart-outline" name="close-outline"></ion-button>
+<ion-icon class="cart-outline" name="close-outline"></ion-icon></ion-button>
         </ion-buttons>
-            <ion-badge id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
+            <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -10px;right:18px;"></ion-badge>
         <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" {{page.outstock}}><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
 <script type="text/javascript">
   $('#item_add').click(function() {
