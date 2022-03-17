@@ -11,7 +11,7 @@ outstock:
 icon: ui-1_simple-remove
 rating: 4.9
 rC: 28
-riv: 66
+riv: 463
 sku: rosse
 mpn: p62s-0154
 kategori: Bordir-cat.38.17873.17876

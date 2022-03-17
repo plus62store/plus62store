@@ -9,7 +9,7 @@ stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
 rC: 211
-riv: 848
+riv: 2148
 sku: dahlia
 mpn: p62s-2134
 noID: i.226754372.7253556909

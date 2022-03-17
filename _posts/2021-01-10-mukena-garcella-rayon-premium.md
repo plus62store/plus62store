@@ -10,7 +10,7 @@ stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
 rC: 80
-riv: 150
+riv: 553
 sku: garcella
 mpn: p62s-0205
 noID: i.226754372.9136934817

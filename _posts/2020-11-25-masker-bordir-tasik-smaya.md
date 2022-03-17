@@ -9,7 +9,7 @@ stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
 rC: 150
-riv: 493
+riv: 1453
 sku: smaya
 mpn: p62s-2200
 noID: i.226754372.3554451614
