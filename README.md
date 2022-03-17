@@ -1,3 +1,3 @@
-WebStore template
-
-# https://plus62store.github.io
+Just a WebStore template
+Sample:
+# https://shop.plus62store.my.id
