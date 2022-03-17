@@ -10,7 +10,7 @@ stok: Stok Tersedia
 outstock: 
 icon: ui-1_simple-remove
 rating: 5.0
-rC: 180
+rC: 576
 riv: 711
 sku: bordirkucing
 mpn: p62s-2143

@@ -9,7 +9,7 @@ discount: '162.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
-rC: 80
+rC: 285
 riv: 553
 sku: garcella
 mpn: p62s-0205

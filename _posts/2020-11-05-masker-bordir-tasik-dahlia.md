@@ -8,7 +8,7 @@ discount: '15.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
-rC: 211
+rC: 2011
 riv: 2148
 sku: dahlia
 mpn: p62s-2134

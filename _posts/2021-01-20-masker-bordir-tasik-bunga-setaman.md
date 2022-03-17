@@ -9,7 +9,7 @@ discount: '15.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
-rC: 47
+rC: 447
 riv: 643
 sku: setaman
 mpn: p62s-0901

@@ -9,7 +9,7 @@ discount: '15.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 4.9
-rC: 40
+rC: 469
 riv: 741
 sku: tulip
 mpn: p62s-2152

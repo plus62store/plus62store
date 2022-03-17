@@ -110,7 +110,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "ratingCount": "104",
+    "ratingCount": "1604",
     "reviewCount": "1853",
     "bestRating": "5.",
     "worstRating": "1"
@@ -233,7 +233,7 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
     <div 
 
  role="main" class="container">
-      <style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
+      <style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}div.select-icon {display: none!important;}div.select-icon-inner{display: none!important;}select {-webkit-appearance: none;-moz-appearance: none;text-indent: 1px;text-overflow: '';}</style>
 <article class="post-product simpleCart_shelfItem">
 <span class="display-none item_link">http://localhost:4000/products/masker-bordir-tasik-ilalang</span>
 <ion-card class="product-page">
@@ -279,7 +279,7 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
   <div class="item-rate" itemprop="aggregateRating"
     itemscope itemtype="https://schema.org/AggregateRating">
     <i class="fa fa-star" style="color:#ffb236;"></i> <span itemprop="ratingValue">5.0</span>/5.0
-   dari <span itemprop="reviewCount">104</span> penilaian
+   dari <span itemprop="reviewCount">1604</span> penilaian
   </div>
   <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 <div class="display-none" style="display:none;grid-gap:5px;">
@@ -306,17 +306,18 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
               <div id="product-7"  style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:#d07897;cursor:pointer;"><span style="color:#fff">Pink</span></div>
             
         	</div>
-
-          <select class="item form-control item_model" style="display:block;">
+<ion-item>
         <ion-label>Model Tali</ion-label>
+          <ion-select class="item_model" interface="action-sheet" placeholder="Pilih Tali">
             
-              <option value="HeadLoop"> HeadLoop </option>
+              <ion-select-option value='HeadLoop'> HeadLoop </ion-select-option>
             
-              <option value="EarLoop"> EarLoop </option>
+              <ion-select-option value='EarLoop'> EarLoop </ion-select-option>
             
-              <option value="Tali Ikat"> Tali Ikat </option>
+              <ion-select-option value='Tali Ikat'> Tali Ikat </ion-select-option>
             
-          </select>
+          </ion-select>
+</ion-item>
 
 <div id="input_div">
     <div class="input-group">

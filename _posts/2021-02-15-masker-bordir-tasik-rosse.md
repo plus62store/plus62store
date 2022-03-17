@@ -10,7 +10,7 @@ stok: Stok Tersedia
 outstock: 
 icon: ui-1_simple-remove
 rating: 4.9
-rC: 28
+rC: 328
 riv: 463
 sku: rosse
 mpn: p62s-0154

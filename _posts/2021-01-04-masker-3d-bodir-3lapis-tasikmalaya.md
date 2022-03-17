@@ -10,7 +10,7 @@ stok: Stok Tersedia
 outstock: 
 icon: ui-1_simple-remove
 rating: 4.9
-rC: 29
+rC: 429
 riv: 513
 sku: masker3D
 mpn: p62s-2154

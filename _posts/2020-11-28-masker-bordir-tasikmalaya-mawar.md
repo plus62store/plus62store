@@ -9,7 +9,7 @@ discount: '15.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
-rC: 180
+rC: 1980
 riv: 2135
 sku: mawar
 mpn: p62s-2143

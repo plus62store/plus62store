@@ -8,7 +8,7 @@ discount: '15.600'
 stok: Stok Tersedia
 icon: ui-1_check
 rating: 5.0
-rC: 104
+rC: 1604
 riv: 1853
 sku: ilalang
 mpn: p62s-2219
