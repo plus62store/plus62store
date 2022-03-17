@@ -2,7 +2,7 @@
 layout: default
 sidebar_option: sidebar
 ---
-<style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}div.select-icon {display: none!important;}div.select-icon-inner{display: none!important;}select {-webkit-appearance: none;-moz-appearance: none;text-indent: 1px;text-overflow: '';}</style>
+<style type="text/css">.just,.masthead,.wrapper-footer{display:none!important;}.container{padding:0px;}.layout-main{margin-top:0px;}*:focus{outline:none;}</style>
 <article class="post-product simpleCart_shelfItem">
 <span class="display-none item_link">{{site.url}}{{page.url}}</span>
 <ion-card class="product-page">
@@ -39,14 +39,12 @@ sidebar_option: sidebar
               <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:{{ style.color }};cursor:pointer;"><span style="color:#fff">{{ style.name }}</span></div>
             {% endfor %}
         	</div>
-<ion-item>
-        <ion-label>Model Tali</ion-label>
-          <ion-select class="item_model" interface="action-sheet" placeholder="Pilih Tali">
+          <select class="item form-control item_model" style="display:{{page.display}};">
+        <label>Model Tali</label>
             {% for tali in page.tali %}
-              <ion-select-option value='{{ tali }}'> {{ tali }} </ion-select-option>
+              <option value="{{ tali }}"> {{ tali }} </option>
             {% endfor %}
-          </ion-select>
-</ion-item>
+          </select>
 
 <div id="input_div">
     <div class="input-group">
