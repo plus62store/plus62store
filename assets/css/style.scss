@@ -24,7 +24,7 @@ body {
 }
 
 ion-toolbar {
-    margin: 10px 0;
+    margin: 0px 0;
   }
 
 .layout-main {
@@ -42,7 +42,6 @@ ion-toolbar {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
   font-weight: bold;
 
   line-height: 1;
@@ -203,6 +202,12 @@ img {
     @include ipad {
     width:100%;}
 }
+
+.logo {
+    border-radius: 50%;
+    width: 56px;
+    margin: 4px;
+}
 //
 // .masthead
 //
@@ -220,8 +225,7 @@ img {
 }
 
 .masthead {
-    padding: 12px 80px;
-    height: 100px;
+    padding: 10px 80px;
 
   @include mobile {
     padding: 12px;
@@ -361,7 +365,7 @@ img {
 
 .site-info {
   float: left;
-  padding-top: 16px;
+  padding-top: 12px;
 
   @include mobile {
     float: none;
@@ -392,7 +396,7 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 12.5px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -591,7 +595,6 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #fff;
 
     @include mobile {
     padding: 0px;}
@@ -781,10 +784,8 @@ ion-icon.wa,.alert,.cart-outline,.more{
     margin: auto;
 }
 .feature_tw {
-    background: #fff;
     display: block;
     padding: 10px 0;
-    color: rgba(0,0,0,.6);
     overflow: auto;
 }
 .feature_tw .grid {
@@ -823,6 +824,31 @@ ion-icon.wa,.alert,.cart-outline,.more{
     padding: 0 10px;}
 }
 .fa-minus-circle:before,.fa-plus-circle:before{font-size:20px;}
+
+.toggle {
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.box-shadow{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);}
+
+.dark-switch {
+    position: fixed;
+    right: -90px;
+    top: 7%;
+@include mobile {
+    top: 7%;}
+}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";

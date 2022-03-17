@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="ios">
+<html lang="id">
 
   <head>
     <title>Plus62 Store – Mukena Garcella – Produk & Jasa Bordir Tasikmalaya</title>
@@ -52,11 +52,18 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/dark.css" />
     <link rel="alternate" type="application/rss+xml" title="Plus62 Store - Produk & Jasa Bordir Tasikmalaya" href="http://localhost:4000/feed.xml" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
+    <style>
+      :root {
+        --ion-safe-area-top: 10px;
+        --ion-safe-area-bottom: 10px;
+      }
+    </style>
   
   <script type="module">
     import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -122,7 +129,7 @@
 }
 </script>
     
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Created with Jekyll - http://jekyllrb.com/ -->
     <!-- Facebook Pixel Code -->
     
 <script>
@@ -175,10 +182,11 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
 <body>
 <ion-app>
 
-    <div class="wrapper-masthead mobile-hide">
-        <ion-header class="masthead clearfix" id="navbar">
-          <ion-router-link href="/products" class="site-avatar">
-<img src="/assets/logo/icon.svg" alt="Plus62 Store"/></ion-router-link>
+    <ion-header class="wrapper-masthead mobile-hide">
+        <ion-toolbar class="masthead clearfix" id="navbar">
+          <ion-router-link href="/products" class="site-avatar"><ion-avatar>
+<img src="/assets/logo/icon.svg" alt="Plus62 Store"/>
+</ion-avatar></ion-router-link>
 
           <div class="site-info">
             <h1 class="site-name"><ion-router-link href="/products">Plus62 Store</ion-router-link></h1>
@@ -195,13 +203,14 @@ src="https://www.facebook.com/tr?id=791401205101923&ev=PageView&noscript=1"
    
             <ion-router-link href="/cart" id="cart-menu"><ion-chip outline color="primary"><ion-label>Cart</ion-label></ion-chip><ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:-15px;"></ion-badge></ion-router-link>
           </nav>
-        </ion-header>
-    </div>
+        </ion-toolbar>
+      </ion-header>
 
 <ion-header class="just mobile-show">
 <ion-toolbar style="padding: 0 10px;">
         <ion-avatar>
-        <ion-router-link href="/products"><img src="/assets/logo/icon.svg" alt="Plus62 Store" /></ion-router-link>
+        <ion-router-link href="/products">
+<img class="logo" src="/assets/logo/icon.svg" alt="Plus62 Store" /></ion-router-link>
         </ion-avatar>
         <ion-buttons slot="end">
           <ion-button id="howOrder" color="danger">
@@ -612,7 +621,7 @@ function privacyPolicy() {
 </ion-content>
 
 <div style="display: none;" id="qris" class="animated-modal text-center" style="">
-<img class="qris" src="images/qris.jpeg"/>
+<img class="qris" src="/images/qris.jpeg"/>
 <p>Scan Qris Untuk Membayar Orderan Anda</p>
 <small>*bisa digunakan untuk semua jenis E-wallet yang mendukung QRIS</small>
 </div>
@@ -676,6 +685,7 @@ function myBri() {
             <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="float: right;"></ion-icon></a>
         </div>
     </form>
+
 
 </ion-app>
     
@@ -793,6 +803,127 @@ $(function() {
 //]]>
 </script>
 
+<div class="dark-switch">
+<ion-chip class="bg-dark-grey box-shadow">
+<ion-avatar class="toggle">
+    <div class="toggle-moon" onclick="setDarkMode(true)" id="darkBtn">
+<i class="fas fa-moon"></i>
+    </div>
+    <div class="toggle-sun" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
+<i class="fas fa-sun"></i>
+   </div>
+</ion-avatar>
+<ion-label color="primary">Dark Mode</ion-label>
+</ion-chip>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+ function setDarkMode(isDark) {
+        var darkBtn = document.getElementById('darkBtn')
+        var lightBtn = document.getElementById('lightBtn')
+
+        if(isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+        } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("darkmode");
+    }
+
+//check localstorage
+if(localStorage.getItem('preferredTheme') == 'dark') {
+    setDarkMode(true)
+}
+
+function setDarkMode(isDark) {
+    var darkBtn = document.getElementById('darkBtn')
+    var lightBtn = document.getElementById('lightBtn')
+
+    if(isDark) {
+        lightBtn.style.display = "block"
+        darkBtn.style.display = "none" 
+    //tambahan localstorage
+        localStorage.setItem('preferredTheme', 'dark');
+    } else {
+        lightBtn.style.display = "none"
+        darkBtn.style.display = "block"
+     //tambahan localstorage
+        localStorage.removeItem('preferredTheme');
+    }
+
+    document.body.classList.toggle("darkmode");
+}
+
+</script>
+<style>
+#install-to-homescreen {padding: 7px 15px; display: none; text-align: center; position: fixed; bottom: 0px; left: 0px; width: 100%; background: #222; color: rgba(255,255,255,0.8); z-index: 99999;}
+#install-to-homescreen a {cursor: pointer; margin-left: 10px;}
+#install-to-homescreen img {display: inline-block; height: 15px; margin: 0 2px; position: relative;}
+#install-to-homescreen img.share_img {height: 18px; bottom: 1px;}
+@media (max-width: 1000px) {
+    #install-to-homescreen span {display: block; padding-top: 3px; margin-bottom: 13px;}
+    #install-to-homescreen a {position: relative; bottom: 4px;}
+}
+@media (max-width: 400px) {
+    #install-to-homescreen br {display: none;}
+}
+</style>
+
+<script>
+var iOS = /^(iPhone|iPad|iPod)/.test(navigator.platform);
+var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1);
+
+    function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    if (iOS) {
+        if (window.navigator.standalone) {
+            $('a').each( function() {
+                if($(this).attr('href')) $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
+            });
+        }
+        //dismiss forever
+        if (getParameterByName('install-to-homescreen-dismissed')=='true') createCookie('install-to-homescreen-dismissed','true',9999);
+    }
+    if(readCookie('install-to-homescreen-dismissed')=='true') {
+        //do nothing... message dismissed... nag again after the set period
+    } else {
+        if(iOS && safari) {
+            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website as a mobile app. <br />Find the share button in your browser (<img src=\"/img/share.svg\" class=\"share_img\" />) and select the plus (<img src=\"/img/addtohomescreen.svg\" class=\"addtohomescreen_img\" />) to install.</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+            $('#install-to-homescreen').show();
+        }
+    }
+
+    $('head').append('<meta name="apple-mobile-web-app-capable" content="yes" />');
+</script>
   </body>
 </html>
 

@@ -1,8 +1,9 @@
 
-    <div class="wrapper-masthead mobile-hide">
-        <ion-header class="masthead clearfix" id="navbar">
-          <ion-router-link href="{{ site.baseurl }}/products" class="site-avatar">
-<img src="{{ site.avatar }}" alt="{{site.title}}"/></ion-router-link>
+    <ion-header class="wrapper-masthead mobile-hide">
+        <ion-toolbar class="masthead clearfix" id="navbar">
+          <ion-router-link href="{{ site.baseurl }}/products" class="site-avatar"><ion-avatar>
+<img src="{{ site.avatar }}" alt="{{site.title}}"/>
+</ion-avatar></ion-router-link>
 
           <div class="site-info">
             <h1 class="site-name"><ion-router-link href="{{ site.baseurl }}/products">{{ site.title }}</ion-router-link></h1>
@@ -15,13 +16,14 @@
    {% endfor %}
             <ion-router-link href="{{ site.baseurl }}/cart" id="cart-menu"><ion-chip outline color="primary"><ion-label>Cart</ion-label></ion-chip><ion-badge class="simpleCart_quantity" style="position:relative;top:-6px;left:-15px;"></ion-badge></ion-router-link>
           </nav>
-        </ion-header>
-    </div>
+        </ion-toolbar>
+      </ion-header>
 
 <ion-header class="just mobile-show">
 <ion-toolbar style="padding: 0 10px;">
         <ion-avatar>
-        <ion-router-link href="{{ site.baseurl }}/products"><img src="{{ site.avatar }}" alt="{{site.title}}" /></ion-router-link>
+        <ion-router-link href="{{ site.baseurl }}/products">
+<img class="logo" src="{{ site.avatar }}" alt="{{site.title}}" /></ion-router-link>
         </ion-avatar>
         <ion-buttons slot="end">
           <ion-button id="howOrder" color="danger">
