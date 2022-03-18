@@ -65,10 +65,12 @@ sidebar_option: sidebar
 <div class="app-description-content description-content" style="cursor:pointer;width:fit-content;color: #3880ff;">Selengkapnya...</div>
   <ion-card class="app-description-text display-none" style="margin:0;">
 <ion-card-header style="padding:0;">
-        <ion-buttons class="app-description-content">
+</ion-toolbar>
+        <ion-buttons class="app-description-content" slot="start">
           <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
           </ion-button>
         </ion-buttons>
+</ion-toolbar>
 </ion-card-header>
 <ion-card-content>
     <p>{{ content }}</p>
