@@ -1,5 +1,5 @@
 //<![CDATA[
-$('#AdminToko').val('{{site.WA_KEY}}');
+$('#AdminToko').val('');
 $('.whatsapp-btn').click(function () {
 $('#whatsapp-order').toggleClass('toggle');});
 
